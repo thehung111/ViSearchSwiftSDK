@@ -9,9 +9,9 @@
 import Foundation
 
 public class ViColorSearchParams: ViBaseSearchParams {
-    var color: String
+    public var color: String
     
-    public init? ( color: String ) {
+    public init? (color: String ) {
         self.color = color
         
         //verify that color is exactly 6 digits

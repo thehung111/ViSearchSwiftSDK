@@ -2,10 +2,10 @@ import Foundation
 
 public class ViTrackParams: ViBaseSearchParams {
 
-    var action : String
-    var imName : String?
-    var reqId  : String
-    var cuid   : String?
+    public var action : String
+    public var imName : String?
+    public var reqId  : String
+    public var cuid   : String?
     var cid    : String
     
     public init?(accessKey: String, reqId : String , action: String ) {

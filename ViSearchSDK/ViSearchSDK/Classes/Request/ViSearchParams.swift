@@ -1,7 +1,7 @@
 import Foundation
 
 public class ViSearchParams: ViBaseSearchParams {
-    var imName: String
+    public var imName: String
     
     public init?(imName: String){
         self.imName = imName

@@ -3,8 +3,8 @@ import Foundation
 public class ViImageSettings {
     public enum Options {case defaultSetting, highQualitySetting}
     
-    var quality: Float
-    var maxWidth: Float
+    public var quality: Float
+    public var maxWidth: Float
     
     public init(setting: Options){
         // high quality

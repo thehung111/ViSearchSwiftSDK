@@ -9,16 +9,16 @@ public protocol ViSearchParamsProtocol{
 public class ViBaseSearchParams : ViSearchParamsProtocol {
 
     // MARK properties
-    var limit : Int = 10
-    var page  : Int = 1
-    var score : Bool = false
-    var fq    : [String:String] = [:]
-    var fl    : [String] = []
-    var queryInfo : Bool = false
-    var scoreMin : Float = 0
-    var scoreMax : Float = 1
-    var getAllFl : Bool = false
-    var detection : String? = nil
+    public var limit : Int = 10
+    public var page  : Int = 1
+    public var score : Bool = false
+    public var fq    : [String:String] = [:]
+    public var fl    : [String] = []
+    public var queryInfo : Bool = false
+    public var scoreMin : Float = 0
+    public var scoreMax : Float = 1
+    public var getAllFl : Bool = false
+    public var detection : String? = nil
     
     // MARK search protocol
     public func toDict() -> [String: Any] {

@@ -1,10 +1,10 @@
 import Foundation
 
 public struct ViBox {
-    var x1 : Int;
-    var x2 : Int;
-    var y1 : Int;
-    var y2 : Int;
+    public var x1 : Int;
+    public var x2 : Int;
+    public var y1 : Int;
+    public var y2 : Int;
     
     
     public init( x1: Int, y1: Int, x2: Int, y2: Int  ){
