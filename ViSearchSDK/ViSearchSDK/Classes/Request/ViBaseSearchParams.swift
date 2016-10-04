@@ -20,7 +20,7 @@ public class ViBaseSearchParams : ViSearchParamsProtocol {
     var getAllFl : Bool = false
     var detection : String? = nil
     
-    
+    // MARK search protocol
     public func toDict() -> [String: Any] {
         var dict : [String:Any] = [:]
         

@@ -19,6 +19,9 @@
 		BD7DEDAF1DA2C10100CDF6DE /* ViImageSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7DEDAE1DA2C10100CDF6DE /* ViImageSettings.swift */; };
 		BD7DEDB11DA2C2C900CDF6DE /* ViSearchParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7DEDB01DA2C2C900CDF6DE /* ViSearchParams.swift */; };
 		BDC0963C1DA34FC0002166B4 /* ViSearchParamsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC0963B1DA34FC0002166B4 /* ViSearchParamsTests.swift */; };
+		BDC0963E1DA35650002166B4 /* UidHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC0963D1DA35650002166B4 /* UidHelper.swift */; };
+		BDC096421DA357C8002166B4 /* SettingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC096411DA357C8002166B4 /* SettingHelper.swift */; };
+		BDC096441DA35BA2002166B4 /* UidHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC096431DA35BA2002166B4 /* UidHelperTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		BD7DEDAE1DA2C10100CDF6DE /* ViImageSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViImageSettings.swift; sourceTree = "<group>"; };
 		BD7DEDB01DA2C2C900CDF6DE /* ViSearchParams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViSearchParams.swift; sourceTree = "<group>"; };
 		BDC0963B1DA34FC0002166B4 /* ViSearchParamsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViSearchParamsTests.swift; sourceTree = "<group>"; };
+		BDC0963D1DA35650002166B4 /* UidHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UidHelper.swift; path = ViSearchSDK/Classes/Helper/UidHelper.swift; sourceTree = SOURCE_ROOT; };
+		BDC096411DA357C8002166B4 /* SettingHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingHelper.swift; path = Helper/SettingHelper.swift; sourceTree = "<group>"; };
+		BDC096431DA35BA2002166B4 /* UidHelperTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UidHelperTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,7 @@
 				BD7DEDA81DA2B1FC00CDF6DE /* ViTrackParamsTests.swift */,
 				BD7DEDAC1DA2B81C00CDF6DE /* ViColorSearchParamsTests.swift */,
 				BDC0963B1DA34FC0002166B4 /* ViSearchParamsTests.swift */,
+				BDC096431DA35BA2002166B4 /* UidHelperTests.swift */,
 				BD7DED921DA2AFCF00CDF6DE /* Info.plist */,
 			);
 			path = ViSearchSDKTests;
@@ -111,6 +118,7 @@
 		BD7DED9F1DA2B14100CDF6DE /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				BDC096401DA35668002166B4 /* Helper */,
 				BD7DEDA01DA2B14100CDF6DE /* Request */,
 				BD7DEDA41DA2B14100CDF6DE /* Response */,
 			);
@@ -135,6 +143,15 @@
 			children = (
 			);
 			path = Response;
+			sourceTree = "<group>";
+		};
+		BDC096401DA35668002166B4 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				BDC0963D1DA35650002166B4 /* UidHelper.swift */,
+				BDC096411DA357C8002166B4 /* SettingHelper.swift */,
+			);
+			name = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,6 +270,8 @@
 				BD7DEDAF1DA2C10100CDF6DE /* ViImageSettings.swift in Sources */,
 				BD7DEDAB1DA2B6C400CDF6DE /* ViColorSearchParams.swift in Sources */,
 				BD7DEDA61DA2B14100CDF6DE /* ViBox.swift in Sources */,
+				BDC096421DA357C8002166B4 /* SettingHelper.swift in Sources */,
+				BDC0963E1DA35650002166B4 /* UidHelper.swift in Sources */,
 				BD7DEDA71DA2B14100CDF6DE /* ViTrackParams.swift in Sources */,
 				BD7DEDA51DA2B14100CDF6DE /* ViBaseSearchParams.swift in Sources */,
 			);
@@ -262,6 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDC096441DA35BA2002166B4 /* UidHelperTests.swift in Sources */,
 				BDC0963C1DA34FC0002166B4 /* ViSearchParamsTests.swift in Sources */,
 				BD7DEDA91DA2B1FC00CDF6DE /* ViTrackParamsTests.swift in Sources */,
 				BD7DED911DA2AFCF00CDF6DE /* ViSearchSDKTests.swift in Sources */,

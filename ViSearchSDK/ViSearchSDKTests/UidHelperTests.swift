@@ -1,5 +1,5 @@
 //
-//  ViSearchParamsTests.swift
+//  UidHelperTests.swift
 //  ViSearchSDK
 //
 //  Created by Hung on 4/10/16.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import ViSearchSDK
 
-class ViSearchParamsTests: XCTestCase {
+class UidHelperTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -21,11 +21,15 @@ class ViSearchParamsTests: XCTestCase {
         super.tearDown()
     }
     
-    func testSearchParamsInit() {
-        XCTAssertNil(ViSearchParams( imName : "" ) )
+    func testGenerateUid() {
+        let deviceId = UidHelper.uniqueDeviceUid()
+//        dump( "deviceId: \(deviceId)" )
+        XCTAssertNotNil(deviceId, "unable to get device id ")
         
-        XCTAssertNotNil(ViSearchParams( imName : "abc" ) )
+        let deviceId2 = UidHelper.uniqueDeviceUid() // should return the same value
+        XCTAssertEqual(deviceId, deviceId2, "device uid should be the same")
+        
     }
-    
+   
     
 }
