@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BDB1F7C01DA41182000C5EAA /* ViSearchSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDCA2E3A1DA38C23004C2EF7 /* ViSearchSDK.framework */; };
+		BDB1F7C81DA41764000C5EAA /* ViSearchSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDCA2E3A1DA38C23004C2EF7 /* ViSearchSDK.framework */; };
 		BDCA2E131DA38B7B004C2EF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA2E121DA38B7B004C2EF7 /* AppDelegate.swift */; };
 		BDCA2E151DA38B7B004C2EF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA2E141DA38B7B004C2EF7 /* ViewController.swift */; };
 		BDCA2E181DA38B7B004C2EF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDCA2E161DA38B7B004C2EF7 /* Main.storyboard */; };
@@ -17,6 +17,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		BDB1F7C91DA417ED000C5EAA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BDCA2E341DA38C23004C2EF7 /* ViSearchSDK.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BD7DED811DA2AFCF00CDF6DE;
+			remoteInfo = ViSearchSDK;
+		};
 		BDCA2E241DA38B7B004C2EF7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BDCA2E071DA38B7B004C2EF7 /* Project object */;
@@ -59,7 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDB1F7C01DA41182000C5EAA /* ViSearchSDK.framework in Frameworks */,
+				BDB1F7C81DA41764000C5EAA /* ViSearchSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +144,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				BDB1F7CA1DA417ED000C5EAA /* PBXTargetDependency */,
 			);
 			name = Example;
 			productName = Example;
@@ -267,6 +275,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		BDB1F7CA1DA417ED000C5EAA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ViSearchSDK;
+			targetProxy = BDB1F7C91DA417ED000C5EAA /* PBXContainerItemProxy */;
+		};
 		BDCA2E251DA38B7B004C2EF7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = BDCA2E0E1DA38B7B004C2EF7 /* Example */;

@@ -23,20 +23,20 @@ open class ViSearchClient: NSObject, URLSessionDelegate {
     public typealias SuccessHandler = (ViResponseData) -> ()
     public typealias FailureHandler = (Error) -> ()
     
-    // MARK properties
+    // MARK: properties
     public var accessKey : String
     public var secret    : String
     public var baseUrl   : String
     
-    private var session: URLSession
-    private var sessionConfig: URLSessionConfiguration
+    public var session: URLSession
+    public var sessionConfig: URLSessionConfiguration
 //    private var uploadSession: URLSession?
 
     public var timeoutInterval : TimeInterval = 10 // how long to timeout request
     public var requestSerialization: ViRequestSerialization
     
  
-    // MARK constructors
+    // MARK: constructors
     public init?(baseUrl: String, accessKey: String , secret: String) {
         
         if baseUrl.isEmpty {
@@ -85,35 +85,52 @@ open class ViSearchClient: NSObject, URLSessionDelegate {
         self.init( baseUrl: ViSearchClient.VISENZE_URL , accessKey: accessKey, secret: secret)
     }
     
-    // MARK Visenze APIs
-    public func colorsearch(params: ViColorSearchParams ) -> Void
+    // MARK: Visenze APIs
+    public func colorSearch(params: ViColorSearchParams,
+                            successHandler: @escaping SuccessHandler,
+                            failureHandler: @escaping FailureHandler
+                            ) -> URLSessionTask
     {
-        let url = requestSerialization.generateRequestUrl(baseUrl: baseUrl, apiEndPoint: .COLOR_SEARCH, searchParams: params)
-        print("\nurl : \(url) \n\n")
-        
-        let request = URLRequest(url: URL(string: url)! , cachePolicy: .useProtocolCachePolicy , timeoutInterval: timeoutInterval)
-        httpGet(request: request, successHandler: {
-                        (data: ViResponseData) -> Void in
-            
-                            print ("\nsuccess\n")
-                        },
-                        failureHandler: {
-                            (err: Error) -> Void in
-                            print ("\nerror\n \(err.localizedDescription)")
-                        }
-                    )
+        return makeGetApiRequest(params: params, apiEndPoint: .COLOR_SEARCH, successHandler: successHandler, failureHandler: failureHandler)
     }
     
-   
-    // MARK http requests internal
-    public func httpGet(request: URLRequest,
+    public func findSimilar(params: ViSearchParams,
+                            successHandler: @escaping SuccessHandler,
+                            failureHandler: @escaping FailureHandler
+        ) -> URLSessionTask
+    {
+        return makeGetApiRequest(params: params, apiEndPoint: .ID_SEARCH, successHandler: successHandler, failureHandler: failureHandler)
+    }
+    
+    public func recommendation(params: ViSearchParams,
+                            successHandler: @escaping SuccessHandler,
+                            failureHandler: @escaping FailureHandler
+        ) -> URLSessionTask
+    {
+        return makeGetApiRequest(params: params, apiEndPoint: .REC_SEARCH, successHandler: successHandler, failureHandler: failureHandler)
+    }
+    
+    // MARK: http requests internal
+    private func makeGetApiRequest(params: ViBaseSearchParams,
+                                   apiEndPoint: ViAPIEndPoints,
+                                   successHandler: @escaping SuccessHandler,
+                                   failureHandler: @escaping FailureHandler
+        ) -> URLSessionTask{
+        
+        let url = requestSerialization.generateRequestUrl(baseUrl: baseUrl, apiEndPoint: apiEndPoint , searchParams: params)
+        let request = URLRequest(url: URL(string: url)! , cachePolicy: .useProtocolCachePolicy , timeoutInterval: timeoutInterval)
+        return httpGet(request: request, successHandler: successHandler, failureHandler: failureHandler )
+        
+    }
+    
+    private func httpGet(request: URLRequest,
                          successHandler: @escaping SuccessHandler,
                          failureHandler: @escaping FailureHandler) -> URLSessionTask
     {
         return httpRequest(method: ViHttpMethod.GET, request: request, successHandler: successHandler, failureHandler: failureHandler)
     }
     
-    public func httpPost(request: URLRequest,
+    private func httpPost(request: URLRequest,
                          successHandler: @escaping SuccessHandler,
                          failureHandler: @escaping FailureHandler) -> URLSessionTask
     {
@@ -152,8 +169,6 @@ open class ViSearchClient: NSObject, URLSessionDelegate {
             }
             else {
                 let responseData = ViResponseData(response: response!, data: data!)
-                // testing
-                dump(responseData)
                 successHandler(responseData)
             }
         })

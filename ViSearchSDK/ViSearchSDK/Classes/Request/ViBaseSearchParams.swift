@@ -8,7 +8,7 @@ public protocol ViSearchParamsProtocol{
 
 public class ViBaseSearchParams : ViSearchParamsProtocol {
 
-    // MARK properties
+    // MARK: properties
     public var limit : Int = 10
     public var page  : Int = 1
     public var score : Bool = false
@@ -20,7 +20,7 @@ public class ViBaseSearchParams : ViSearchParamsProtocol {
     public var getAllFl : Bool = false
     public var detection : String? = nil
     
-    // MARK search protocol
+    // MARK: search protocol
     public func toDict() -> [String: Any] {
         var dict : [String:Any] = [:]
         
