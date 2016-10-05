@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BDB1F7C81DA41764000C5EAA /* ViSearchSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDCA2E3A1DA38C23004C2EF7 /* ViSearchSDK.framework */; };
+		BDB1F7D61DA50A43000C5EAA /* ViSearchSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDCA2E3A1DA38C23004C2EF7 /* ViSearchSDK.framework */; };
+		BDB1F7D71DA50A43000C5EAA /* ViSearchSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BDCA2E3A1DA38C23004C2EF7 /* ViSearchSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BDCA2E131DA38B7B004C2EF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA2E121DA38B7B004C2EF7 /* AppDelegate.swift */; };
 		BDCA2E151DA38B7B004C2EF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA2E141DA38B7B004C2EF7 /* ViewController.swift */; };
 		BDCA2E181DA38B7B004C2EF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDCA2E161DA38B7B004C2EF7 /* Main.storyboard */; };
@@ -17,7 +18,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		BDB1F7C91DA417ED000C5EAA /* PBXContainerItemProxy */ = {
+		BDB1F7D31DA50A35000C5EAA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BDCA2E341DA38C23004C2EF7 /* ViSearchSDK.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BD7DED811DA2AFCF00CDF6DE;
+			remoteInfo = ViSearchSDK;
+		};
+		BDB1F7D81DA50A43000C5EAA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BDCA2E341DA38C23004C2EF7 /* ViSearchSDK.xcodeproj */;
 			proxyType = 1;
@@ -47,6 +55,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		BDB1F7DA1DA50A44000C5EAA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BDB1F7D71DA50A43000C5EAA /* ViSearchSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		BDCA2E0F1DA38B7B004C2EF7 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDCA2E121DA38B7B004C2EF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,7 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDB1F7C81DA41764000C5EAA /* ViSearchSDK.framework in Frameworks */,
+				BDB1F7D61DA50A43000C5EAA /* ViSearchSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,11 +162,13 @@
 				BDCA2E0B1DA38B7B004C2EF7 /* Sources */,
 				BDCA2E0C1DA38B7B004C2EF7 /* Frameworks */,
 				BDCA2E0D1DA38B7B004C2EF7 /* Resources */,
+				BDB1F7DA1DA50A44000C5EAA /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				BDB1F7CA1DA417ED000C5EAA /* PBXTargetDependency */,
+				BDB1F7D41DA50A35000C5EAA /* PBXTargetDependency */,
+				BDB1F7D91DA50A43000C5EAA /* PBXTargetDependency */,
 			);
 			name = Example;
 			productName = Example;
@@ -275,10 +299,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		BDB1F7CA1DA417ED000C5EAA /* PBXTargetDependency */ = {
+		BDB1F7D41DA50A35000C5EAA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = ViSearchSDK;
-			targetProxy = BDB1F7C91DA417ED000C5EAA /* PBXContainerItemProxy */;
+			targetProxy = BDB1F7D31DA50A35000C5EAA /* PBXContainerItemProxy */;
+		};
+		BDB1F7D91DA50A43000C5EAA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ViSearchSDK;
+			targetProxy = BDB1F7D81DA50A43000C5EAA /* PBXContainerItemProxy */;
 		};
 		BDCA2E251DA38B7B004C2EF7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -401,6 +430,7 @@
 		BDCA2E2D1DA38B7B004C2EF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = NKN6QECX9M;
 				INFOPLIST_FILE = Example/Info.plist;
@@ -414,6 +444,7 @@
 		BDCA2E2E1DA38B7B004C2EF7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = NKN6QECX9M;
 				INFOPLIST_FILE = Example/Info.plist;

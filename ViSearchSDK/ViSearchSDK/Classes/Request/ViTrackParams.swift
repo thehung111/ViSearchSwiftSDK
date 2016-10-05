@@ -1,6 +1,6 @@
 import Foundation
 
-public class ViTrackParams: ViBaseSearchParams {
+public class ViTrackParams : ViSearchParamsProtocol{
 
     public var action : String
     public var imName : String?
@@ -27,6 +27,22 @@ public class ViTrackParams: ViBaseSearchParams {
         self.action = action
         self.cuid = nil
         self.imName = nil
+    }
+    
+    public func toDict() -> [String: Any] {
+        var dict : [String:Any] = [:]
+        dict["action"] = action
+        dict["reqid"] = reqId
+        dict["cid"] = cid
+        
+        if imName != nil {
+            dict["im_name"] = imName
+        }
+        if cuid != nil {
+            dict["cuid"] = cuid
+        }
+        return dict ;
+        
     }
     
 }

@@ -21,7 +21,7 @@ open class ViRequestSerialization {
     }
     
     // generate the url with query string
-    public func generateRequestUrl( baseUrl: String , apiEndPoint: ViAPIEndPoints , searchParams : ViBaseSearchParams) -> String {
+    public func generateRequestUrl( baseUrl: String , apiEndPoint: ViAPIEndPoints , searchParams : ViSearchParamsProtocol) -> String {
         let queryString = generateQueryString(searchParams.toDict())
         return "\(baseUrl)/\(apiEndPoint.rawValue)?\(queryString)"
     }
