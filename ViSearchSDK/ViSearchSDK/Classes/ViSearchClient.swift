@@ -19,6 +19,8 @@ public enum ViAPIEndPoints: String {
 open class ViSearchClient: NSObject, URLSessionDelegate {
     
     public static let VISENZE_URL = "https://visearch.visenze.com"
+    public static let VISENZE_TRACK_URL = "https://track.visenze.com"
+    
     
     public typealias SuccessHandler = (ViResponseData?) -> ()
     public typealias FailureHandler = (Error) -> ()
@@ -147,7 +149,7 @@ open class ViSearchClient: NSObject, URLSessionDelegate {
                       ) -> Void {
         
         // different url for tracking
-        let url = requestSerialization.generateRequestUrl(baseUrl: "https://track.visenze.com" , apiEndPoint: .TRACK , searchParams: params)
+        let url = requestSerialization.generateRequestUrl(baseUrl: ViSearchClient.VISENZE_TRACK_URL , apiEndPoint: .TRACK , searchParams: params)
         let request = NSMutableURLRequest(url: URL(string: url)! , cachePolicy: .useProtocolCachePolicy , timeoutInterval: timeoutInterval)
         
         let deviceUid = UidHelper.uniqueDeviceUid()
