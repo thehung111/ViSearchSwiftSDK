@@ -6,7 +6,7 @@ public protocol ViSearchParamsProtocol{
 
 }
 
-public class ViBaseSearchParams : ViSearchParamsProtocol {
+open class ViBaseSearchParams : ViSearchParamsProtocol {
 
     // MARK: properties
     public var limit : Int = 10

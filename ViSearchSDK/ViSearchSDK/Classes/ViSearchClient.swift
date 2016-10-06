@@ -86,7 +86,38 @@ open class ViSearchClient: NSObject, URLSessionDelegate {
     }
     
     // MARK: Visenze APIs
-    public func colorSearch(params: ViColorSearchParams,
+    @discardableResult public func uploadSearch(params: ViUploadSearchParams,
+                             successHandler: @escaping SuccessHandler,
+                             failureHandler: @escaping FailureHandler) -> URLSessionTask
+    {
+        // NOTE: image must be first line before generating of url
+        // url box parameters depend on whether the compress image is generated
+        let imageData: Data? = params.generateCompressImageForUpload()
+        let url = requestSerialization.generateRequestUrl(baseUrl: baseUrl, apiEndPoint: .UPLOAD_SEARCH , searchParams: params)
+        let request = NSMutableURLRequest(url: URL(string: url)! , cachePolicy: .useProtocolCachePolicy , timeoutInterval: timeoutInterval)
+        
+        let boundary = ViMultipartFormData.randomBoundary()
+        request.addValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
+        request.httpBody = ViMultipartFormData.encode(imageData: imageData, boundary: boundary);
+        
+        // make tracking call to record the action
+        return httpPost(request: request,
+                       successHandler: {
+                        (data: ViResponseData?) -> Void in
+                        
+                        if let resData = data {
+                            if let reqId = resData.reqId {
+                                let params = ViTrackParams(accessKey: self.accessKey, reqId: reqId, action: ViAPIEndPoints.UPLOAD_SEARCH.rawValue )
+                                self.track(params: params!, handler: nil)
+                            }
+                        }
+                        
+                        successHandler(data)
+            },
+                       failureHandler: failureHandler )
+    }
+    
+    @discardableResult public func colorSearch(params: ViColorSearchParams,
                             successHandler: @escaping SuccessHandler,
                             failureHandler: @escaping FailureHandler
                             ) -> URLSessionTask
@@ -94,7 +125,7 @@ open class ViSearchClient: NSObject, URLSessionDelegate {
         return makeGetApiRequest(params: params, apiEndPoint: .COLOR_SEARCH, successHandler: successHandler, failureHandler: failureHandler)
     }
     
-    public func findSimilar(params: ViSearchParams,
+    @discardableResult public func findSimilar(params: ViSearchParams,
                             successHandler: @escaping SuccessHandler,
                             failureHandler: @escaping FailureHandler
         ) -> URLSessionTask
@@ -102,7 +133,7 @@ open class ViSearchClient: NSObject, URLSessionDelegate {
         return makeGetApiRequest(params: params, apiEndPoint: .ID_SEARCH, successHandler: successHandler, failureHandler: failureHandler)
     }
     
-    public func recommendation(params: ViSearchParams,
+    @discardableResult public func recommendation(params: ViSearchParams,
                             successHandler: @escaping SuccessHandler,
                             failureHandler: @escaping FailureHandler
         ) -> URLSessionTask
@@ -111,18 +142,18 @@ open class ViSearchClient: NSObject, URLSessionDelegate {
     }
     
     // track the API calls and various actions
-    public func track(params: ViTrackParams,
+    @discardableResult public func track(params: ViTrackParams,
                       handler:  ( (_ success: Bool, Error?) -> Void )?
                       ) -> Void {
         
         // different url for tracking
         let url = requestSerialization.generateRequestUrl(baseUrl: "https://track.visenze.com" , apiEndPoint: .TRACK , searchParams: params)
-        var request = URLRequest(url: URL(string: url)! , cachePolicy: .useProtocolCachePolicy , timeoutInterval: timeoutInterval)
+        let request = NSMutableURLRequest(url: URL(string: url)! , cachePolicy: .useProtocolCachePolicy , timeoutInterval: timeoutInterval)
         
         let deviceUid = UidHelper.uniqueDeviceUid()
         request.addValue("uid=\(deviceUid)", forHTTPHeaderField: "Cookie")
         
-        session.dataTask(with: request, completionHandler:{
+        session.dataTask(with: request as URLRequest, completionHandler:{
             (data, response, error) in
             if handler != nil {
                 let hasError = (error == nil)
@@ -132,6 +163,8 @@ open class ViSearchClient: NSObject, URLSessionDelegate {
     }
     
     // MARK: http requests internal
+    
+    // make API call and also send a tracking request immediately if successful
     private func makeGetApiRequest(params: ViBaseSearchParams,
                                    apiEndPoint: ViAPIEndPoints,
                                    successHandler: @escaping SuccessHandler,
@@ -139,7 +172,7 @@ open class ViSearchClient: NSObject, URLSessionDelegate {
         ) -> URLSessionTask{
         
         let url = requestSerialization.generateRequestUrl(baseUrl: baseUrl, apiEndPoint: apiEndPoint , searchParams: params)
-        let request = URLRequest(url: URL(string: url)! , cachePolicy: .useProtocolCachePolicy , timeoutInterval: timeoutInterval)
+        let request = NSMutableURLRequest(url: URL(string: url)! , cachePolicy: .useProtocolCachePolicy , timeoutInterval: timeoutInterval)
         
         // make tracking call to record the action 
         return httpGet(request: request,
@@ -159,14 +192,14 @@ open class ViSearchClient: NSObject, URLSessionDelegate {
         
     }
     
-    private func httpGet(request: URLRequest,
+    private func httpGet(request: NSMutableURLRequest,
                          successHandler: @escaping SuccessHandler,
                          failureHandler: @escaping FailureHandler) -> URLSessionTask
     {
         return httpRequest(method: ViHttpMethod.GET, request: request, successHandler: successHandler, failureHandler: failureHandler)
     }
     
-    private func httpPost(request: URLRequest,
+    private func httpPost(request: NSMutableURLRequest,
                          successHandler: @escaping SuccessHandler,
                          failureHandler: @escaping FailureHandler) -> URLSessionTask
     {
@@ -174,11 +207,11 @@ open class ViSearchClient: NSObject, URLSessionDelegate {
     }
     
     private func httpRequest(method: ViHttpMethod,
-                             request: URLRequest,
+                             request: NSMutableURLRequest,
                              successHandler: @escaping SuccessHandler,
                              failureHandler: @escaping FailureHandler) -> URLSessionTask {
         
-        
+        request.httpMethod = method.rawValue
         let task = createSessionTaskWithRequest(request: request, successHandler: successHandler, failureHandler: failureHandler)
         task.resume()
         
@@ -194,11 +227,11 @@ open class ViSearchClient: NSObject, URLSessionDelegate {
      *
      *  @return session task
      */
-    private func createSessionTaskWithRequest(request: URLRequest,
+    private func createSessionTaskWithRequest(request: NSMutableURLRequest,
                                               successHandler: @escaping SuccessHandler,
                                               failureHandler: @escaping FailureHandler) -> URLSessionTask
     {
-        let task = session.dataTask(with: request , completionHandler:{
+        let task = session.dataTask(with: request as URLRequest , completionHandler:{
             (data, response, error) in
             if (error != nil) {
                 failureHandler(error!)

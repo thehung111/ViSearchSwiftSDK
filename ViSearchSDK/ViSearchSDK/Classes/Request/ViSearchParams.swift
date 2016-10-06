@@ -7,6 +7,8 @@ public class ViSearchParams: ViBaseSearchParams {
         self.imName = imName
         
         if imName.isEmpty {
+            print("\(type(of: self)).\(#function)[line:\(#line)] - error: imName is missing")
+            
             return nil
         }
     }

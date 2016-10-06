@@ -96,7 +96,7 @@ open class ViResponseData: NSObject {
 
         }
         catch {
-            print ("an error has occured when processing the request data. Json response might be invalid." )
+            print("\(type(of: self)).\(#function)[line:\(#line)] - error: Json response might be invalid. Error during processing:")
             print ("\(error)\n")
         }
 

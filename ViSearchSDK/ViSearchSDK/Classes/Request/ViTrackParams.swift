@@ -11,14 +11,20 @@ public class ViTrackParams : ViSearchParamsProtocol{
     public init?(accessKey: String, reqId : String , action: String ) {
         
         if accessKey.isEmpty {
+            print("\(type(of: self)).\(#function)[line:\(#line)] - error: accessKey parameter is missing")
+            
             return nil
         }
         
         if reqId.isEmpty {
+            print("\(type(of: self)).\(#function)[line:\(#line)] - error: reqId parameter is missing")
+            
             return nil
         }
         
         if action.isEmpty {
+            print("\(type(of: self)).\(#function)[line:\(#line)] - error: action parameter is missing")
+            
             return nil
         }
         

@@ -6,6 +6,7 @@ public class ViImageSettings {
     public var quality: Float
     public var maxWidth: Float
     
+    
     public init(setting: Options){
         // high quality
         if(setting == .highQualitySetting){
@@ -17,6 +18,11 @@ public class ViImageSettings {
         quality = 0.97;
         maxWidth = 512;
     }
+    
+    public convenience init(){
+        self.init(setting: Options.defaultSetting)
+    }
+    
     
     public init(size: CGSize, quality: Float) {
         self.quality = quality
