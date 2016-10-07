@@ -105,6 +105,7 @@ class ViewController: UIViewController {
     
     private func sampleRecommend(){
         let params = ViSearchParams(imName: "imName-example")
+//        params!.fl = ["price","brand","im_url"]
         ViSearch.sharedInstance.recommendation( params: params!,
                             successHandler: {
                                 (data : ViResponseData?) -> Void in

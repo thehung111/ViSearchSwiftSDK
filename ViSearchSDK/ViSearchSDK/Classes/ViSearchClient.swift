@@ -29,6 +29,7 @@ open class ViSearchClient: NSObject, URLSessionDelegate {
     public var accessKey : String
     public var secret    : String
     public var baseUrl   : String
+    public var trackUrl  : String
     
     public var session: URLSession
     public var sessionConfig: URLSessionConfiguration
@@ -79,6 +80,7 @@ open class ViSearchClient: NSObject, URLSessionDelegate {
         
         session = URLSession(configuration: sessionConfig)
         
+        self.trackUrl = ViSearchClient.VISENZE_TRACK_URL
         
     }
     
@@ -149,7 +151,7 @@ open class ViSearchClient: NSObject, URLSessionDelegate {
                       ) -> Void {
         
         // different url for tracking
-        let url = requestSerialization.generateRequestUrl(baseUrl: ViSearchClient.VISENZE_TRACK_URL , apiEndPoint: .TRACK , searchParams: params)
+        let url = requestSerialization.generateRequestUrl(baseUrl: trackUrl , apiEndPoint: .TRACK , searchParams: params)
         let request = NSMutableURLRequest(url: URL(string: url)! , cachePolicy: .useProtocolCachePolicy , timeoutInterval: timeoutInterval)
         
         let deviceUid = UidHelper.uniqueDeviceUid()

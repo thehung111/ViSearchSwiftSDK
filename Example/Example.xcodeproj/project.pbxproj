@@ -7,8 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD50FD5B1DA7ADA00035FD78 /* SearchResultsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD50FD5A1DA7ADA00035FD78 /* SearchResultsCollectionViewController.swift */; };
+		BD50FD5E1DA7B0050035FD78 /* ImgCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD50FD5D1DA7B0050035FD78 /* ImgCollectionViewCell.swift */; };
+		BD65405C1DA7480700E10162 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65405B1DA7480700E10162 /* HomeTableViewController.swift */; };
+		BD65405F1DA74D7300E10162 /* UIViewController+alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65405E1DA74D7300E10162 /* UIViewController+alert.swift */; };
 		BDB1F7D61DA50A43000C5EAA /* ViSearchSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDCA2E3A1DA38C23004C2EF7 /* ViSearchSDK.framework */; };
 		BDB1F7D71DA50A43000C5EAA /* ViSearchSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BDCA2E3A1DA38C23004C2EF7 /* ViSearchSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BDB2440A1DA76EB0000268BB /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB244091DA76EB0000268BB /* SearchViewController.swift */; };
+		BDB244541DA7A254000268BB /* KRActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB2444E1DA7A254000268BB /* KRActivityIndicatorView.swift */; };
+		BDB244551DA7A254000268BB /* KRActivityIndicatorViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB2444F1DA7A254000268BB /* KRActivityIndicatorViewStyle.swift */; };
+		BDB244561DA7A254000268BB /* KRProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB244501DA7A254000268BB /* KRProgressHUD.swift */; };
+		BDB244571DA7A254000268BB /* KRProgressHUDExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB244511DA7A254000268BB /* KRProgressHUDExtensions.swift */; };
+		BDB244581DA7A254000268BB /* KRProgressHUDIconType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB244521DA7A254000268BB /* KRProgressHUDIconType.swift */; };
+		BDB244591DA7A254000268BB /* KRProgressHUDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB244531DA7A254000268BB /* KRProgressHUDViewController.swift */; };
+		BDB244891DA7A33D000268BB /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDB244881DA7A33D000268BB /* ImageIO.framework */; };
+		BDB2448B1DA7A367000268BB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDB2448A1DA7A367000268BB /* QuartzCore.framework */; };
+		BDB2448F1DA7A394000268BB /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDB2448E1DA7A394000268BB /* MediaPlayer.framework */; };
+		BDB244FC1DA7AB5B000268BB /* Disk.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB244F61DA7AB5B000268BB /* Disk.swift */; };
+		BDB244FD1DA7AB5B000268BB /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB244F71DA7AB5B000268BB /* ImageLoader.swift */; };
+		BDB244FE1DA7AB5B000268BB /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB244F81DA7AB5B000268BB /* Loader.swift */; };
+		BDB244FF1DA7AB5B000268BB /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB244F91DA7AB5B000268BB /* Manager.swift */; };
+		BDB245001DA7AB5B000268BB /* UIImage+ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB244FA1DA7AB5B000268BB /* UIImage+ImageLoader.swift */; };
+		BDB245011DA7AB5B000268BB /* UIImageView+ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB244FB1DA7AB5B000268BB /* UIImageView+ImageLoader.swift */; };
 		BDCA2E131DA38B7B004C2EF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA2E121DA38B7B004C2EF7 /* AppDelegate.swift */; };
 		BDCA2E151DA38B7B004C2EF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA2E141DA38B7B004C2EF7 /* ViewController.swift */; };
 		BDCA2E181DA38B7B004C2EF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDCA2E161DA38B7B004C2EF7 /* Main.storyboard */; };
@@ -70,6 +90,27 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BD50FD5A1DA7ADA00035FD78 /* SearchResultsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsCollectionViewController.swift; sourceTree = "<group>"; };
+		BD50FD5D1DA7B0050035FD78 /* ImgCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImgCollectionViewCell.swift; sourceTree = "<group>"; };
+		BD65405B1DA7480700E10162 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		BD65405E1DA74D7300E10162 /* UIViewController+alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+alert.swift"; path = "Helper/UIViewController+alert.swift"; sourceTree = "<group>"; };
+		BDB244091DA76EB0000268BB /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		BDB2444E1DA7A254000268BB /* KRActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KRActivityIndicatorView.swift; sourceTree = "<group>"; };
+		BDB2444F1DA7A254000268BB /* KRActivityIndicatorViewStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KRActivityIndicatorViewStyle.swift; sourceTree = "<group>"; };
+		BDB244501DA7A254000268BB /* KRProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KRProgressHUD.swift; sourceTree = "<group>"; };
+		BDB244511DA7A254000268BB /* KRProgressHUDExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KRProgressHUDExtensions.swift; sourceTree = "<group>"; };
+		BDB244521DA7A254000268BB /* KRProgressHUDIconType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KRProgressHUDIconType.swift; sourceTree = "<group>"; };
+		BDB244531DA7A254000268BB /* KRProgressHUDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KRProgressHUDViewController.swift; sourceTree = "<group>"; };
+		BDB244881DA7A33D000268BB /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		BDB2448A1DA7A367000268BB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		BDB2448C1DA7A38F000268BB /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		BDB2448E1DA7A394000268BB /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		BDB244F61DA7AB5B000268BB /* Disk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Disk.swift; sourceTree = "<group>"; };
+		BDB244F71DA7AB5B000268BB /* ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		BDB244F81DA7AB5B000268BB /* Loader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
+		BDB244F91DA7AB5B000268BB /* Manager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
+		BDB244FA1DA7AB5B000268BB /* UIImage+ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+ImageLoader.swift"; sourceTree = "<group>"; };
+		BDB244FB1DA7AB5B000268BB /* UIImageView+ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+ImageLoader.swift"; sourceTree = "<group>"; };
 		BDCA2E0F1DA38B7B004C2EF7 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDCA2E121DA38B7B004C2EF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDCA2E141DA38B7B004C2EF7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +129,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDB2448F1DA7A394000268BB /* MediaPlayer.framework in Frameworks */,
+				BDB2448B1DA7A367000268BB /* QuartzCore.framework in Frameworks */,
+				BDB244891DA7A33D000268BB /* ImageIO.framework in Frameworks */,
 				BDB1F7D61DA50A43000C5EAA /* ViSearchSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -102,6 +146,68 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD65405D1DA74D5700E10162 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				BD65405E1DA74D7300E10162 /* UIViewController+alert.swift */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		BDB2440E1DA77F5D000268BB /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				BDB244F51DA7AB5B000268BB /* ImageLoader */,
+				BDB2444C1DA7A254000268BB /* KRProgressHUD */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		BDB2444C1DA7A254000268BB /* KRProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				BDB2444D1DA7A254000268BB /* KRActivityIndicatorView */,
+				BDB244501DA7A254000268BB /* KRProgressHUD.swift */,
+				BDB244511DA7A254000268BB /* KRProgressHUDExtensions.swift */,
+				BDB244521DA7A254000268BB /* KRProgressHUDIconType.swift */,
+				BDB244531DA7A254000268BB /* KRProgressHUDViewController.swift */,
+			);
+			path = KRProgressHUD;
+			sourceTree = "<group>";
+		};
+		BDB2444D1DA7A254000268BB /* KRActivityIndicatorView */ = {
+			isa = PBXGroup;
+			children = (
+				BDB2444E1DA7A254000268BB /* KRActivityIndicatorView.swift */,
+				BDB2444F1DA7A254000268BB /* KRActivityIndicatorViewStyle.swift */,
+			);
+			path = KRActivityIndicatorView;
+			sourceTree = "<group>";
+		};
+		BDB244871DA7A33D000268BB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BDB2448E1DA7A394000268BB /* MediaPlayer.framework */,
+				BDB2448C1DA7A38F000268BB /* AssetsLibrary.framework */,
+				BDB2448A1DA7A367000268BB /* QuartzCore.framework */,
+				BDB244881DA7A33D000268BB /* ImageIO.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BDB244F51DA7AB5B000268BB /* ImageLoader */ = {
+			isa = PBXGroup;
+			children = (
+				BDB244F61DA7AB5B000268BB /* Disk.swift */,
+				BDB244F71DA7AB5B000268BB /* ImageLoader.swift */,
+				BDB244F81DA7AB5B000268BB /* Loader.swift */,
+				BDB244F91DA7AB5B000268BB /* Manager.swift */,
+				BDB244FA1DA7AB5B000268BB /* UIImage+ImageLoader.swift */,
+				BDB244FB1DA7AB5B000268BB /* UIImageView+ImageLoader.swift */,
+			);
+			path = ImageLoader;
+			sourceTree = "<group>";
+		};
 		BDCA2E061DA38B7B004C2EF7 = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +215,7 @@
 				BDCA2E111DA38B7B004C2EF7 /* Example */,
 				BDCA2E261DA38B7B004C2EF7 /* ExampleTests */,
 				BDCA2E101DA38B7B004C2EF7 /* Products */,
+				BDB244871DA7A33D000268BB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,11 +231,17 @@
 		BDCA2E111DA38B7B004C2EF7 /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				BDB2440E1DA77F5D000268BB /* Lib */,
+				BD65405D1DA74D5700E10162 /* Helper */,
 				BDCA2E121DA38B7B004C2EF7 /* AppDelegate.swift */,
 				BDCA2E141DA38B7B004C2EF7 /* ViewController.swift */,
+				BD65405B1DA7480700E10162 /* HomeTableViewController.swift */,
+				BDB244091DA76EB0000268BB /* SearchViewController.swift */,
+				BD50FD5A1DA7ADA00035FD78 /* SearchResultsCollectionViewController.swift */,
+				BD50FD5D1DA7B0050035FD78 /* ImgCollectionViewCell.swift */,
 				BDCA2E161DA38B7B004C2EF7 /* Main.storyboard */,
-				BDCA2E191DA38B7B004C2EF7 /* Assets.xcassets */,
 				BDCA2E1B1DA38B7B004C2EF7 /* LaunchScreen.storyboard */,
+				BDCA2E191DA38B7B004C2EF7 /* Assets.xcassets */,
 				BDCA2E1E1DA38B7B004C2EF7 /* Info.plist */,
 			);
 			path = Example;
@@ -223,6 +336,8 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
+				fi,
 			);
 			mainGroup = BDCA2E061DA38B7B004C2EF7;
 			productRefGroup = BDCA2E101DA38B7B004C2EF7 /* Products */;
@@ -283,8 +398,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDB244FC1DA7AB5B000268BB /* Disk.swift in Sources */,
+				BDB244551DA7A254000268BB /* KRActivityIndicatorViewStyle.swift in Sources */,
+				BDB244541DA7A254000268BB /* KRActivityIndicatorView.swift in Sources */,
+				BDB244581DA7A254000268BB /* KRProgressHUDIconType.swift in Sources */,
+				BDB245011DA7AB5B000268BB /* UIImageView+ImageLoader.swift in Sources */,
+				BDB244FF1DA7AB5B000268BB /* Manager.swift in Sources */,
+				BDB244571DA7A254000268BB /* KRProgressHUDExtensions.swift in Sources */,
+				BD50FD5E1DA7B0050035FD78 /* ImgCollectionViewCell.swift in Sources */,
+				BDB2440A1DA76EB0000268BB /* SearchViewController.swift in Sources */,
+				BDB244561DA7A254000268BB /* KRProgressHUD.swift in Sources */,
+				BD65405F1DA74D7300E10162 /* UIViewController+alert.swift in Sources */,
+				BD65405C1DA7480700E10162 /* HomeTableViewController.swift in Sources */,
+				BD50FD5B1DA7ADA00035FD78 /* SearchResultsCollectionViewController.swift in Sources */,
+				BDB245001DA7AB5B000268BB /* UIImage+ImageLoader.swift in Sources */,
 				BDCA2E151DA38B7B004C2EF7 /* ViewController.swift in Sources */,
 				BDCA2E131DA38B7B004C2EF7 /* AppDelegate.swift in Sources */,
+				BDB244591DA7A254000268BB /* KRProgressHUDViewController.swift in Sources */,
+				BDB244FE1DA7AB5B000268BB /* Loader.swift in Sources */,
+				BDB244FD1DA7AB5B000268BB /* ImageLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

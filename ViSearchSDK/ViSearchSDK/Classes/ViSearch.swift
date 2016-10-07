@@ -12,6 +12,10 @@ open class ViSearch: NSObject {
         super.init()
     }
     
+    public func isClientSetup() -> Bool {
+        return client != nil
+    }
+    
     // MARK: setup
     public func setup(accessKey: String, secret: String) -> Void {
         if client == nil {
@@ -41,7 +45,7 @@ open class ViSearch: NSObject {
         ) -> URLSessionTask?
     {
         if let client = client {
-            client.colorSearch(params: params, successHandler: successHandler, failureHandler: failureHandler)
+            return client.colorSearch(params: params, successHandler: successHandler, failureHandler: failureHandler)
         }
         
         print("\(type(of: self)).\(#function)[line:\(#line)] - error: client is not initialized. Please call setup(accessKey, secret) before using the API.")
@@ -54,7 +58,7 @@ open class ViSearch: NSObject {
         ) -> URLSessionTask?
     {
         if let client = client {
-            client.findSimilar(params: params, successHandler: successHandler, failureHandler: failureHandler)
+            return client.findSimilar(params: params, successHandler: successHandler, failureHandler: failureHandler)
         }
         
         print("\(type(of: self)).\(#function)[line:\(#line)] - error: client is not initialized. Please call setup(accessKey, secret) before using the API.")
@@ -67,7 +71,7 @@ open class ViSearch: NSObject {
         ) -> URLSessionTask?
     {
         if let client = client {
-            client.recommendation(params: params, successHandler: successHandler, failureHandler: failureHandler)
+            return client.recommendation(params: params, successHandler: successHandler, failureHandler: failureHandler)
         }
         
         print("\(type(of: self)).\(#function)[line:\(#line)] - error: client is not initialized. Please call setup(accessKey, secret) before using the API.")

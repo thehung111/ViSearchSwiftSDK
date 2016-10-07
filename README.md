@@ -1,5 +1,6 @@
 # ViSearch Swift SDK and Demo Source Code
 
+![Swift](http://img.shields.io/badge/swift-3.0-brightgreen.svg)
 ![https://travis-ci.org/thehung111/ViSearchSwiftSDK.svg?branch=master](https://travis-ci.org/thehung111/ViSearchSwiftSDK.svg?branch=master)
 
 ---
@@ -412,7 +413,7 @@ params.limit = 30;
 To retrieve metadata of your search results, provide a list of metadata keys as the `fl` (field list) in the basic search property:
 
 ```swift
-params.fl = @[@"price",@"brand",@"im_url"];
+params!.fl = ["price","brand","im_url"]
 ```
 
 To retrieve all metadata of your image results, specify get_all_fl parameter and set it to true:
