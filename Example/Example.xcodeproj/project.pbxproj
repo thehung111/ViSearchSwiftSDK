@@ -53,7 +53,6 @@
 		BDB245001DA7AB5B000268BB /* UIImage+ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB244FA1DA7AB5B000268BB /* UIImage+ImageLoader.swift */; };
 		BDB245011DA7AB5B000268BB /* UIImageView+ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB244FB1DA7AB5B000268BB /* UIImageView+ImageLoader.swift */; };
 		BDCA2E131DA38B7B004C2EF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA2E121DA38B7B004C2EF7 /* AppDelegate.swift */; };
-		BDCA2E151DA38B7B004C2EF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA2E141DA38B7B004C2EF7 /* ViewController.swift */; };
 		BDCA2E181DA38B7B004C2EF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDCA2E161DA38B7B004C2EF7 /* Main.storyboard */; };
 		BDCA2E1A1DA38B7B004C2EF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDCA2E191DA38B7B004C2EF7 /* Assets.xcassets */; };
 		BDCA2E1D1DA38B7B004C2EF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDCA2E1B1DA38B7B004C2EF7 /* LaunchScreen.storyboard */; };
@@ -159,7 +158,6 @@
 		BDB244FB1DA7AB5B000268BB /* UIImageView+ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+ImageLoader.swift"; sourceTree = "<group>"; };
 		BDCA2E0F1DA38B7B004C2EF7 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDCA2E121DA38B7B004C2EF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BDCA2E141DA38B7B004C2EF7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BDCA2E171DA38B7B004C2EF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BDCA2E191DA38B7B004C2EF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BDCA2E1C1DA38B7B004C2EF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -334,7 +332,6 @@
 				BDB2440E1DA77F5D000268BB /* Lib */,
 				BD65405D1DA74D5700E10162 /* Helper */,
 				BDCA2E121DA38B7B004C2EF7 /* AppDelegate.swift */,
-				BDCA2E141DA38B7B004C2EF7 /* ViewController.swift */,
 				BD65405B1DA7480700E10162 /* HomeTableViewController.swift */,
 				BDB244091DA76EB0000268BB /* SearchViewController.swift */,
 				BD50FD911DA9328D0035FD78 /* SearchByImageViewController.swift */,
@@ -534,7 +531,6 @@
 				BD50FD921DA9328D0035FD78 /* SearchByImageViewController.swift in Sources */,
 				BD50FD5B1DA7ADA00035FD78 /* SearchResultsCollectionViewController.swift in Sources */,
 				BDB245001DA7AB5B000268BB /* UIImage+ImageLoader.swift in Sources */,
-				BDCA2E151DA38B7B004C2EF7 /* ViewController.swift in Sources */,
 				BD50FD851DA92FCE0035FD78 /* UIViewExtensions.swift in Sources */,
 				BDCA2E131DA38B7B004C2EF7 /* AppDelegate.swift in Sources */,
 				BD50FD7E1DA92FCE0035FD78 /* CameraGlobals.swift in Sources */,

@@ -47,16 +47,6 @@ class SearchResultsCollectionViewController: UICollectionViewController {
         KRProgressHUD.dismiss()
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
-
     // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -93,6 +83,7 @@ class SearchResultsCollectionViewController: UICollectionViewController {
         let im_name = photoResults[indexPath.row].im_name
         
         // call tracking api here to register the click
+        // alternately, you can present similar images or recommend them to users in the image detail page
         let params = ViTrackParams(accessKey: ViSearch.sharedInstance.client!.accessKey, reqId: self.reqId, action: "click")
         params?.imName = im_name
         
@@ -103,6 +94,8 @@ class SearchResultsCollectionViewController: UICollectionViewController {
             }
 
         }
+        
+        
     }
     
     /*

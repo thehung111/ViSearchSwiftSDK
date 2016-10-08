@@ -126,7 +126,7 @@ open class ViResponseData: NSObject {
             if let dict = jsonItem as? [String:Any] {
                 let type = dict["type"] as! String
                 let item = ViProductTypeList(type: type)
-                item.attributes_list = dict["attributes"] as! [String: Any]
+                item.attributes_list = dict["attributes_list"] as! [String: Any]
                 results.append(item)
             }
         }

@@ -24,6 +24,31 @@ class SearchByImageViewController: UIViewController {
             params.fl = ["im_url"] // retrieve image url. By default the API only return im_name if does not specify fl parameter
             params.limit = 15 // display 15 results per page
             
+            // set this if you want to get all meta-data of the image
+//            params.getAllFl = true
+            
+            // set this for automatic object recognition
+//            params.detection = "all"
+            
+            // example for filtering if category and price are defined in the schema
+//            params.fq["category"] = "furniture"
+//            params.fq["price"] = "200.0,250.0"
+            
+            /*
+            // EXAMPLE for search image by url
+            let params = ViUploadSearchParams(im_url: "http://somesite.com/sample_image.png")
+            
+            // example for search image by id
+            let params = ViUploadSearchParams(im_id: "im_id_example")
+             
+            // example to configure box
+            let box = ViBox(x1: 5, y1: 5, x2: 5, y2: 5)
+            params?.box = box
+             
+            // example for setting image quality
+            params?.img_settings = ViImageSettings(size: CGSize(width: 800, height: 800), quality: 0.9)
+            */
+            
             ViSearch.sharedInstance.uploadSearch( params: params,
                                                  successHandler: {
                                                     (data : ViResponseData?) -> Void in
@@ -41,7 +66,9 @@ class SearchByImageViewController: UIViewController {
                                                         }
                                                         else {
                                                             // perform segue here
-                                                            //dump(data)
+                                                            
+                                                            // for debuging, dump all data from server
+                                                            dump(data)
                                                             self.recentResponseData = data
                                                             
                                                             DispatchQueue.main.async {
