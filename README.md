@@ -50,7 +50,7 @@ The source code of a demo application is provided together with the SDK ([demo](
 
 ![screenshot](./doc/xcode_1.png)
 
-You should change the access key and secret key to your own key pair before running.
+You should change the access key and secret key in AppDelegate file to your own key pair before running.
 
 ```swift
 
@@ -71,7 +71,6 @@ In Xcode, go to File > New > Project Select the Single View Application.
 
 Type a name for your project and press Next, here we use Demo as the project name.
 
-TODO: // update screenshot later for swift
 ![screenshot](./doc/ios1.png)
 
 ### 2.3 Import ViSearch Swift SDK
@@ -81,8 +80,8 @@ TODO: // update screenshot later for swift
 First you need to install the CocoaPods Ruby gem:
 
 ```
-[sudo] gem install cocoapods
-pod setup
+# Xcode 7 + 8
+sudo gem install cocoapods --pre
 ```
 
 Then go to your project directory to create an empty Podfile
@@ -93,11 +92,9 @@ pod init
 
 Edit the Podfile as follow:
 ```
-source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '8.0'
+platform :ios, '9.0'
 ...
-// TODO: update this
-//pod 'ViSearchSwift', '~>1.0.0'
+pod 'ViSearchSwiftDev', '~>0.0.1'
 ...
 ```
 
@@ -110,8 +107,7 @@ The Demo.xcworkspace project should be created.
 
 #### 2.3.2 Using Manual Approach
 
-// TODO: update
-You can also download the iOS [ViSearch SDK](https://github.com/visenze/visearch-sdk-ios/archive/master.zip) directly. To use it, unzip it and drag ViSearch SDK folder into Demo project's file folder.
+You can also download the iOS [ViSearch SDK](https://github.com/thehung111/ViSearchSwiftSDK/archive/master.zip) directly. To use it, unzip it and drag ViSearchSDK project into Demo project.
 
 ![screenshot](./doc/ios2.png)
 
@@ -129,8 +125,7 @@ iOS 10 now requires user permission to access camera and photo library. If your 
 ```swift
 import ViSearchSDK
 ...
-// using default ViSearch client. The client, by default,
-// connects to Visenze's server
+// using default ViSearch client. The client, by default, will connect to Visenze's server
 ViSearch.sharedInstance.setup(accessKey: "YOUR_ACCESS_KEY", secret: "YOUR_SECRET_KEY")
 
 ...
@@ -322,6 +317,9 @@ import ViSearchSDK
 ...
 
 let params = ViColorSearchParams(color: "ff00ff")
+// alternately, you can pass UIColor object to the initializer
+// let params = ViColorSearchParams(color: someUIColorObject)
+
 client.colorSearch( params: params!,
                     successHandler: {
                         (data : ViResponseData?) -> Void in
@@ -340,13 +338,13 @@ client.colorSearch( params: params!,
 
 ## 5. Search Results
 
-After a successful search request, a list of results are passed to the callback function in the form of **ViResponseData**.  You can use following properties from the result to fulfill your own purpose.
+After a successful search request, a list of results are passed to the callback function in the form of **ViResponseData**.  You can use the following properties from the result to fulfill your own purpose.
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
-|hasError|Bool|If there are errors returned by Visenze server. |
-|error|String Array| return the error messages from server if there is any. |
-|result|ViImageResult Array|A list of image results returned from the server.|
+|hasError|Bool|true if there are errors returned by Visenze server. |
+|error|[String]| return the error messages from server if there is any. |
+|result|[ViImageResult]|A list of image results returned from the server.|
 |reqId|String?|A request id which can be used for tracking. More details can be found in [Section 7](#7-event-tracking) |
 |im_id|String?|An image id returned in the result which represents a image just uploaded. It can be re-used to do an upload search on the same image again. More details in [Search by image](#43-search-by-image)|
 
@@ -355,7 +353,7 @@ Below are the properties of a **ViImageResult** .
 | Name | Type | Description |
 | ---- | ---- | ----------- |
 |im_name|String|the identify name of the image.|
-|im_url|String?|url of the image if available e.g. when set getAllFl to true|
+|im_url|String?|url of the image if available e.g. when set getAllFl to true or set fl property to include im_url|
 |score|Float?|A float value ranging from 0.0 to 1.0. Refer to *Section 6.3 Result Score*.|
 |metadataDict|Dictionary|Other metadata returned from server. Refer to *Section 6.1 Retrieving Metadata*.|
 
@@ -388,7 +386,7 @@ Below are the properties of a **ViImageResult** .
 
 ```
 
- You can provide pagination parameters to control the paging of the image search results. by configuring the basic search parameters in `ViBaseSearchParams`. As the result is returned in a format of a list of images page by page, use `setLimit` to set the number of results per page, `setPage` to indicate the page number:
+ You can provide pagination parameters to control the paging of the image search results by configuring the basic search parameters in `ViBaseSearchParams`. As the result is returned in a format of a list of images page by page, use `limit` to set the number of results per page, `page` to indicate the page number:
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
@@ -416,7 +414,7 @@ To retrieve metadata of your search results, provide a list of metadata keys as 
 params!.fl = ["price","brand","im_url"]
 ```
 
-To retrieve all metadata of your image results, specify get_all_fl parameter and set it to true:
+To retrieve all metadata of your image results, specify `get_all_fl` parameter and set it to true:
 ```swift
 params.getAllFl = true;
 ```
@@ -538,7 +536,7 @@ User action (e.g. click on an image after search) can be sent in this way:
 
 ```swift
 
-let params = ViTrackParams(accessKey: accessKey, reqId: reqId, action: "click" )
+let params = ViTrackParams(accessKey: ViSearch.sharedInstance.client!.accessKey, reqId: recentReqId, action: "click" )
                                     
 // You can also append an im_name field
 params.imName = "example_clicked_im_name"
@@ -553,5 +551,5 @@ The following fields could be used for tracking user events:
 Field | Description | Required
 --- | --- | ---
 reqid| visearch request id of current search. This attribute can be accessed in ViResponseData in [Section 5](#5-search-results) | Require
-action | action type, eg: view, click, buy, add_cart. Currently, we only support click event. More events will be supported in the future. | Require
+action | action type, eg: view, click, buy, add_cart. Currently, we only support `click` event. More events will be supported in the future. | Require
 imName | image id (im_name) for this behavior | Optional
