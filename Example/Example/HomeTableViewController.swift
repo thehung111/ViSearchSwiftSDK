@@ -82,7 +82,6 @@ class HomeTableViewController: UITableViewController {
                 let demoItem = demoItems[indexPath.row]
                 if demoItem == HomeTableViewController.COLOR_SEARCH {
                     searchController.demoApi = ViAPIEndPoints.COLOR_SEARCH
-                    
                 }
                 else if demoItem == HomeTableViewController.FIND_SIMILAR_SEARCH {
                     searchController.demoApi = ViAPIEndPoints.ID_SEARCH

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BD50FD5B1DA7ADA00035FD78 /* SearchResultsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD50FD5A1DA7ADA00035FD78 /* SearchResultsCollectionViewController.swift */; };
 		BD50FD5E1DA7B0050035FD78 /* ImgCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD50FD5D1DA7B0050035FD78 /* ImgCollectionViewCell.swift */; };
+		BD50FD601DA7C22D0035FD78 /* SwiftHUEColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD50FD5F1DA7C22D0035FD78 /* SwiftHUEColorPicker.swift */; };
 		BD65405C1DA7480700E10162 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65405B1DA7480700E10162 /* HomeTableViewController.swift */; };
 		BD65405F1DA74D7300E10162 /* UIViewController+alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65405E1DA74D7300E10162 /* UIViewController+alert.swift */; };
 		BDB1F7D61DA50A43000C5EAA /* ViSearchSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDCA2E3A1DA38C23004C2EF7 /* ViSearchSDK.framework */; };
@@ -92,6 +93,7 @@
 /* Begin PBXFileReference section */
 		BD50FD5A1DA7ADA00035FD78 /* SearchResultsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsCollectionViewController.swift; sourceTree = "<group>"; };
 		BD50FD5D1DA7B0050035FD78 /* ImgCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImgCollectionViewCell.swift; sourceTree = "<group>"; };
+		BD50FD5F1DA7C22D0035FD78 /* SwiftHUEColorPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftHUEColorPicker.swift; sourceTree = "<group>"; };
 		BD65405B1DA7480700E10162 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		BD65405E1DA74D7300E10162 /* UIViewController+alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+alert.swift"; path = "Helper/UIViewController+alert.swift"; sourceTree = "<group>"; };
 		BDB244091DA76EB0000268BB /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 		BDB2440E1DA77F5D000268BB /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				BD50FD5F1DA7C22D0035FD78 /* SwiftHUEColorPicker.swift */,
 				BDB244F51DA7AB5B000268BB /* ImageLoader */,
 				BDB2444C1DA7A254000268BB /* KRProgressHUD */,
 			);
@@ -406,6 +409,7 @@
 				BDB244FF1DA7AB5B000268BB /* Manager.swift in Sources */,
 				BDB244571DA7A254000268BB /* KRProgressHUDExtensions.swift in Sources */,
 				BD50FD5E1DA7B0050035FD78 /* ImgCollectionViewCell.swift in Sources */,
+				BD50FD601DA7C22D0035FD78 /* SwiftHUEColorPicker.swift in Sources */,
 				BDB2440A1DA76EB0000268BB /* SearchViewController.swift in Sources */,
 				BDB244561DA7A254000268BB /* KRProgressHUD.swift in Sources */,
 				BD65405F1DA74D7300E10162 /* UIViewController+alert.swift in Sources */,

@@ -6,7 +6,7 @@
 //  Copyright © 2016 Hung. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 public class ViColorSearchParams: ViBaseSearchParams {
     public var color: String
@@ -29,6 +29,10 @@ public class ViColorSearchParams: ViBaseSearchParams {
             
             return nil
         }
+    }
+    
+    public convenience init (color: UIColor){
+        self.init(color: color.hexString())!
     }
     
     public override func toDict() -> [String: Any] {

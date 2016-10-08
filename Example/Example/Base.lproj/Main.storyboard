@@ -78,14 +78,47 @@
                                             <action selector="textEditingChanged:" destination="RXa-FN-Jp7" eventType="editingChanged" id="TgZ-UF-RPH"/>
                                         </connections>
                                     </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sq5-r0-IWV" customClass="SwiftHUEColorPicker" customModule="Example" customModuleProvider="target">
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="fEm-qE-cSX"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3zW-ab-BHs" userLabel="Saturation color picker" customClass="SwiftHUEColorPicker" customModule="Example" customModuleProvider="target">
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="zV8-lo-3o5"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F6D-oa-M9W" userLabel="Brightness picker" customClass="SwiftHUEColorPicker" customModule="Example" customModuleProvider="target">
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="h0K-MD-fkv"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fGH-mN-3yL" userLabel="Alpha picker" customClass="SwiftHUEColorPicker" customModule="Example" customModuleProvider="target">
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="20D-MW-uOJ"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nN9-gx-msa" userLabel="colorView">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="noV-UL-eEl"/>
+                                    <constraint firstAttribute="width" constant="80" id="xCS-6w-Obk"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="j13-FB-Nvs" secondAttribute="trailing" constant="10" id="0qp-5x-TRx"/>
+                            <constraint firstItem="nN9-gx-msa" firstAttribute="top" secondItem="j13-FB-Nvs" secondAttribute="bottom" constant="8" id="9cq-1C-Xuo"/>
                             <constraint firstAttribute="leadingMargin" secondItem="j13-FB-Nvs" secondAttribute="leading" constant="10" id="TpH-kb-dxF"/>
                             <constraint firstItem="j13-FB-Nvs" firstAttribute="top" secondItem="ygm-Vr-2Dw" secondAttribute="bottom" constant="10" id="d6S-9n-ogo"/>
+                            <constraint firstItem="nN9-gx-msa" firstAttribute="centerX" secondItem="Ijt-fx-cSN" secondAttribute="centerX" id="i8c-dD-pM2"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -98,7 +131,12 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="alphaColorPicker" destination="fGH-mN-3yL" id="bzY-WM-i9Z"/>
+                        <outlet property="brightnessColorPicker" destination="F6D-oa-M9W" id="QMt-60-ssV"/>
+                        <outlet property="colorPicker" destination="sq5-r0-IWV" id="itm-JO-7dU"/>
+                        <outlet property="colorView" destination="nN9-gx-msa" id="4J7-Yn-al3"/>
                         <outlet property="paramLabel" destination="ZFE-fM-kZt" id="rlf-44-CjV"/>
+                        <outlet property="saturationColorPicker" destination="3zW-ab-BHs" id="PM3-7D-meH"/>
                         <outlet property="searchBtn" destination="RwP-Cb-FFp" id="prR-YZ-fab"/>
                         <outlet property="textField" destination="xM3-KO-fVP" id="aNX-KE-K9V"/>
                         <segue destination="RmE-Uo-Im5" kind="show" identifier="showSearchResults" id="0lt-Uc-OHE"/>
