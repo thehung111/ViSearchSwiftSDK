@@ -48,7 +48,7 @@ The ViSearch iOS SDK is an open source software to provide easy integration of V
 
 The source code of a demo application is provided together with the SDK ([demo](https://github.com/thehung111/ViSearchSwiftSDK/tree/master/Example)). You can simply open **Example** project in XCode and run the demo.
 
-![screenshot](./doc/xcode_1.png)
+![screenshot](./doc/xcode_1_1.png)
 
 You should change the access key and secret key in AppDelegate file to your own key pair before running.
 
@@ -60,7 +60,7 @@ ViSearch.sharedInstance.setup(accessKey: "YOUR_ACCESS_KEY", secret: "YOUR_SECRET
 
 You can play around with our demo app to see how we build up the cool image search feature using ViSearch SDK.
 
-![ios_demo](./doc/ios_demo.png)
+![ios_demo1](./doc/ios_demo1.png)
 
 
 ### 2.2 Set up Xcode project
@@ -71,7 +71,7 @@ In Xcode, go to File > New > Project Select the Single View Application.
 
 Type a name for your project and press Next, here we use Demo as the project name.
 
-![screenshot](./doc/ios1.png)
+![screenshot](./doc/ios1_1.png)
 
 ### 2.3 Import ViSearch Swift SDK
 
@@ -109,7 +109,7 @@ The Demo.xcworkspace project should be created.
 
 You can also download the iOS [ViSearch SDK](https://github.com/thehung111/ViSearchSwiftSDK/archive/master.zip) directly. To use it, unzip it and drag ViSearchSDK project into Demo project.
 
-![screenshot](./doc/ios2.png)
+![screenshot](./doc/ios2_1.png)
 
 Then add it to your project
 
