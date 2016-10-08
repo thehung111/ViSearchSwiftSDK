@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        // TODO: fill in your access key and secret here
         ViSearch.sharedInstance.setup(accessKey: "", secret: "")
         
         return true

@@ -14,6 +14,7 @@ import ViSearchSDK
 class SearchResultsCollectionViewController: UICollectionViewController {
 
     public var photoResults: [ViImageResult] = []
+    public var reqId : String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +36,15 @@ class SearchResultsCollectionViewController: UICollectionViewController {
         layout.minimumLineSpacing = 1.0
         layout.footerReferenceSize = CGSize(width: collectionView!.bounds.size.width, height: 100.0)
         collectionView!.collectionViewLayout = layout
+    }
+    
+    //MARK: hud methods
+    private func showHud(){
+        KRProgressHUD.show()
+    }
+    
+    private func dismissHud() {
+        KRProgressHUD.dismiss()
     }
     
     /*
@@ -76,6 +86,25 @@ class SearchResultsCollectionViewController: UICollectionViewController {
 
     // MARK: UICollectionViewDelegate
 
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        showHud()
+        
+        let im_name = photoResults[indexPath.row].im_name
+        
+        // call tracking api here to register the click
+        let params = ViTrackParams(accessKey: ViSearch.sharedInstance.client!.accessKey, reqId: self.reqId, action: "click")
+        params?.imName = im_name
+        
+        ViSearch.sharedInstance.track(params: params!) { (success, error) in
+            DispatchQueue.main.async {
+                self.alert(message: "Click event sent!")
+                self.dismissHud()
+            }
+
+        }
+    }
+    
     /*
     // Uncomment this method to specify if the specified item should be highlighted during tracking
     override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {

@@ -156,7 +156,9 @@ class SearchViewController: UIViewController, UITextFieldDelegate, SwiftHUEColor
                                                     if data.hasError {
                                                         let errMsgs =  data.error.joined(separator: ",")
                                                         // error message from server e.g. invalid parameter
-                                                        self.alert(message: "API error: \(errMsgs)", title: "Error")
+                                                        DispatchQueue.main.async {
+                                                            self.alert(message: "API error: \(errMsgs)", title: "Error")
+                                                        }
                                                     }
                                                     else {
                                                         // perform segue here
@@ -176,9 +178,12 @@ class SearchViewController: UIViewController, UITextFieldDelegate, SwiftHUEColor
             },
                                              failureHandler: {
                                                 (err) -> Void in
-                                                // Do something when request fails e.g. due to network error
-                                                self.alert(message: "An error has occured: \(err.localizedDescription)", title: "Error")
-                                                self.dismissHud()
+                                                
+                                                DispatchQueue.main.async {
+                                                    // Do something when request fails e.g. due to network error
+                                                    self.alert(message: "An error has occured: \(err.localizedDescription)", title: "Error")
+                                                    self.dismissHud()
+                                                }
                                                 
         })
     }
@@ -202,8 +207,11 @@ class SearchViewController: UIViewController, UITextFieldDelegate, SwiftHUEColor
                                                 if let data = data {
                                                     if data.hasError {
                                                         let errMsgs =  data.error.joined(separator: ",")
-                                                        // error message from server e.g. invalid parameter
-                                                        self.alert(message: "API error: \(errMsgs)", title: "Error")
+                                                        
+                                                        DispatchQueue.main.async {
+                                                            // error message from server e.g. invalid parameter
+                                                            self.alert(message: "API error: \(errMsgs)", title: "Error")
+                                                        }
                                                     }
                                                     else {
                                                         // perform segue here
@@ -223,9 +231,12 @@ class SearchViewController: UIViewController, UITextFieldDelegate, SwiftHUEColor
             },
                                              failureHandler: {
                                                 (err) -> Void in
-                                                // Do something when request fails e.g. due to network error
-                                                self.alert(message: "An error has occured: \(err.localizedDescription)", title: "Error")
-                                                self.dismissHud()
+                                                
+                                                DispatchQueue.main.async {
+                                                    // Do something when request fails e.g. due to network error
+                                                    self.alert(message: "An error has occured: \(err.localizedDescription)", title: "Error")
+                                                    self.dismissHud()
+                                                }
                                                 
         })
     }
@@ -251,7 +262,9 @@ class SearchViewController: UIViewController, UITextFieldDelegate, SwiftHUEColor
                                                     if data.hasError {
                                                         let errMsgs =  data.error.joined(separator: ",")
                                                         // error message from server e.g. invalid parameter
-                                                        self.alert(message: "API error: \(errMsgs)", title: "Error")
+                                                        DispatchQueue.main.async {
+                                                            self.alert(message: "API error: \(errMsgs)", title: "Error")
+                                                        }
                                                     }
                                                     else {
                                                         // perform segue here
@@ -272,8 +285,10 @@ class SearchViewController: UIViewController, UITextFieldDelegate, SwiftHUEColor
                                              failureHandler: {
                                                 (err) -> Void in
                                                 // Do something when request fails e.g. due to network error
-                                                self.alert(message: "An error has occured: \(err.localizedDescription)", title: "Error")
-                                                self.dismissHud()
+                                                DispatchQueue.main.async {
+                                                    self.alert(message: "An error has occured: \(err.localizedDescription)", title: "Error")
+                                                    self.dismissHud()
+                                                }
                                                 
         })
     }
@@ -301,6 +316,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate, SwiftHUEColor
             if let recentResponseData = recentResponseData {
                 let searchResultsController = segue.destination as! SearchResultsCollectionViewController
                 searchResultsController.photoResults = recentResponseData.result
+                searchResultsController.reqId = recentResponseData.reqId!
                 
             }
         }

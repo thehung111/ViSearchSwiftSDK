@@ -32,9 +32,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="RXa-FN-Jp7" kind="show" identifier="startDemoSegue" id="zzf-wk-I9K"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -43,6 +40,10 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Solution APIs Demo" id="qBh-Cj-JQ1"/>
+                    <connections>
+                        <segue destination="RXa-FN-Jp7" kind="show" identifier="startDemoSegue" id="fpb-1k-VMu"/>
+                        <segue destination="Bw2-cn-iPv" kind="show" identifier="showImageSearch" id="ZW1-9y-bV4"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mW4-vz-9bF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -146,11 +147,82 @@
             </objects>
             <point key="canvasLocation" x="2520.8000000000002" y="136.28185907046478"/>
         </scene>
+        <!--Search by Image Controller-->
+        <scene sceneID="Q7T-Ds-WGU">
+            <objects>
+                <viewController title="Search by Image Controller" id="Bw2-cn-iPv" customClass="SearchByImageViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5EE-FK-j6L"/>
+                        <viewControllerLayoutGuide type="bottom" id="su3-1W-h6T"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NSl-WF-G4B">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tpo-vq-AOW">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7v-Ct-vrF">
+                                        <color key="backgroundColor" name="selectedMenuItemColor" catalog="System" colorSpace="catalog"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="6Oh-GO-NV8"/>
+                                            <constraint firstAttribute="width" constant="200" id="Ryg-tR-P6U"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <state key="normal" title="Take Photo"/>
+                                        <connections>
+                                            <action selector="takePhotoClick:" destination="Bw2-cn-iPv" eventType="touchUpInside" id="isy-le-OyK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gH2-hi-aou">
+                                        <color key="backgroundColor" name="selectedMenuItemColor" catalog="System" colorSpace="catalog"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="5Kr-dU-Dt3"/>
+                                            <constraint firstAttribute="width" constant="200" id="AbF-My-jNn"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <state key="normal" title="Choose from Gallery"/>
+                                        <connections>
+                                            <action selector="chooseFromGallery:" destination="Bw2-cn-iPv" eventType="touchUpInside" id="fwR-Na-dWK"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="utC-XF-1La">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="300" id="I1D-J7-ncU"/>
+                                            <constraint firstAttribute="width" constant="300" id="e2k-PO-gEE"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tpo-vq-AOW" firstAttribute="top" secondItem="5EE-FK-j6L" secondAttribute="bottom" constant="10" id="FKw-h5-W6V"/>
+                            <constraint firstAttribute="trailing" secondItem="tpo-vq-AOW" secondAttribute="trailing" constant="10" id="TR8-bz-cR1"/>
+                            <constraint firstItem="tpo-vq-AOW" firstAttribute="leading" secondItem="NSl-WF-G4B" secondAttribute="leading" constant="10" id="dkR-rd-T5u"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Search by Image" id="PUs-sx-xxj">
+                        <barButtonItem key="rightBarButtonItem" title="Search" id="HGE-WX-WoR">
+                            <connections>
+                                <action selector="searchClick:" destination="Bw2-cn-iPv" id="yuv-i7-5xP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imgView" destination="utC-XF-1La" id="jdK-sG-2Fk"/>
+                        <outlet property="searchBtn" destination="HGE-WX-WoR" id="BcL-ZR-xNf"/>
+                        <segue destination="RmE-Uo-Im5" kind="show" identifier="showResultsFromImage" id="hac-Th-cfj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="58u-qF-IyG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2463" y="893"/>
+        </scene>
         <!--Search Results-->
         <scene sceneID="Bcw-H2-O4G">
             <objects>
                 <collectionViewController title="Search Results" id="RmE-Uo-Im5" customClass="SearchResultsCollectionViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="sat-HV-Uvl">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="sat-HV-Uvl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -204,7 +276,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sJ2-MW-Dse" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3240.8000000000002" y="136.28185907046478"/>
+            <point key="canvasLocation" x="3346" y="159"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qvH-cB-tWL">
@@ -225,4 +297,7 @@
             <point key="canvasLocation" x="808.79999999999995" y="136.28185907046478"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="hac-Th-cfj"/>
+    </inferredMetricsTieBreakers>
 </document>

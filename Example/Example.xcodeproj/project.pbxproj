@@ -10,6 +10,28 @@
 		BD50FD5B1DA7ADA00035FD78 /* SearchResultsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD50FD5A1DA7ADA00035FD78 /* SearchResultsCollectionViewController.swift */; };
 		BD50FD5E1DA7B0050035FD78 /* ImgCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD50FD5D1DA7B0050035FD78 /* ImgCollectionViewCell.swift */; };
 		BD50FD601DA7C22D0035FD78 /* SwiftHUEColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD50FD5F1DA7C22D0035FD78 /* SwiftHUEColorPicker.swift */; };
+		BD50FD7C1DA92FCE0035FD78 /* CameraView.strings in Resources */ = {isa = PBXBuildFile; fileRef = BD50FD641DA92FCE0035FD78 /* CameraView.strings */; };
+		BD50FD7D1DA92FCE0035FD78 /* CameraViewAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD50FD651DA92FCE0035FD78 /* CameraViewAssets.xcassets */; };
+		BD50FD7E1DA92FCE0035FD78 /* CameraGlobals.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD50FD671DA92FCE0035FD78 /* CameraGlobals.swift */; };
+		BD50FD7F1DA92FCE0035FD78 /* CameraShot.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD50FD681DA92FCE0035FD78 /* CameraShot.swift */; };
+		BD50FD801DA92FCE0035FD78 /* ImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD50FD691DA92FCE0035FD78 /* ImageFetcher.swift */; };
+		BD50FD811DA92FCE0035FD78 /* PhotoLibraryAuthorizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD50FD6A1DA92FCE0035FD78 /* PhotoLibraryAuthorizer.swift */; };
+		BD50FD821DA92FCE0035FD78 /* SingleImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD50FD6B1DA92FCE0035FD78 /* SingleImageFetcher.swift */; };
+		BD50FD831DA92FCE0035FD78 /* SingleImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD50FD6C1DA92FCE0035FD78 /* SingleImageSaver.swift */; };
+		BD50FD841DA92FCE0035FD78 /* UIButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD50FD6D1DA92FCE0035FD78 /* UIButtonExtensions.swift */; };
+		BD50FD851DA92FCE0035FD78 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD50FD6E1DA92FCE0035FD78 /* UIViewExtensions.swift */; };
+		BD50FD861DA92FCE0035FD78 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD50FD6F1DA92FCE0035FD78 /* Utilities.swift */; };
+		BD50FD871DA92FCE0035FD78 /* VolumeControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD50FD701DA92FCE0035FD78 /* VolumeControl.swift */; };
+		BD50FD881DA92FCE0035FD78 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD50FD721DA92FCE0035FD78 /* CameraViewController.swift */; };
+		BD50FD891DA92FCE0035FD78 /* CameraViewControllerConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD50FD731DA92FCE0035FD78 /* CameraViewControllerConstraint.swift */; };
+		BD50FD8A1DA92FCE0035FD78 /* ConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD50FD741DA92FCE0035FD78 /* ConfirmViewController.swift */; };
+		BD50FD8B1DA92FCE0035FD78 /* ConfirmViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD50FD751DA92FCE0035FD78 /* ConfirmViewController.xib */; };
+		BD50FD8C1DA92FCE0035FD78 /* PhotoLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD50FD761DA92FCE0035FD78 /* PhotoLibraryViewController.swift */; };
+		BD50FD8D1DA92FCE0035FD78 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD50FD781DA92FCE0035FD78 /* CameraView.swift */; };
+		BD50FD8E1DA92FCE0035FD78 /* CropOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD50FD791DA92FCE0035FD78 /* CropOverlay.swift */; };
+		BD50FD8F1DA92FCE0035FD78 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD50FD7A1DA92FCE0035FD78 /* ImageCell.swift */; };
+		BD50FD901DA92FCE0035FD78 /* PermissionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD50FD7B1DA92FCE0035FD78 /* PermissionsView.swift */; };
+		BD50FD921DA9328D0035FD78 /* SearchByImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD50FD911DA9328D0035FD78 /* SearchByImageViewController.swift */; };
 		BD65405C1DA7480700E10162 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65405B1DA7480700E10162 /* HomeTableViewController.swift */; };
 		BD65405F1DA74D7300E10162 /* UIViewController+alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65405E1DA74D7300E10162 /* UIViewController+alert.swift */; };
 		BDB1F7D61DA50A43000C5EAA /* ViSearchSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDCA2E3A1DA38C23004C2EF7 /* ViSearchSDK.framework */; };
@@ -94,6 +116,28 @@
 		BD50FD5A1DA7ADA00035FD78 /* SearchResultsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsCollectionViewController.swift; sourceTree = "<group>"; };
 		BD50FD5D1DA7B0050035FD78 /* ImgCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImgCollectionViewCell.swift; sourceTree = "<group>"; };
 		BD50FD5F1DA7C22D0035FD78 /* SwiftHUEColorPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftHUEColorPicker.swift; sourceTree = "<group>"; };
+		BD50FD641DA92FCE0035FD78 /* CameraView.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = CameraView.strings; sourceTree = "<group>"; };
+		BD50FD651DA92FCE0035FD78 /* CameraViewAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CameraViewAssets.xcassets; sourceTree = "<group>"; };
+		BD50FD671DA92FCE0035FD78 /* CameraGlobals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraGlobals.swift; sourceTree = "<group>"; };
+		BD50FD681DA92FCE0035FD78 /* CameraShot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraShot.swift; sourceTree = "<group>"; };
+		BD50FD691DA92FCE0035FD78 /* ImageFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFetcher.swift; sourceTree = "<group>"; };
+		BD50FD6A1DA92FCE0035FD78 /* PhotoLibraryAuthorizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoLibraryAuthorizer.swift; sourceTree = "<group>"; };
+		BD50FD6B1DA92FCE0035FD78 /* SingleImageFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleImageFetcher.swift; sourceTree = "<group>"; };
+		BD50FD6C1DA92FCE0035FD78 /* SingleImageSaver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleImageSaver.swift; sourceTree = "<group>"; };
+		BD50FD6D1DA92FCE0035FD78 /* UIButtonExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonExtensions.swift; sourceTree = "<group>"; };
+		BD50FD6E1DA92FCE0035FD78 /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		BD50FD6F1DA92FCE0035FD78 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		BD50FD701DA92FCE0035FD78 /* VolumeControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolumeControl.swift; sourceTree = "<group>"; };
+		BD50FD721DA92FCE0035FD78 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		BD50FD731DA92FCE0035FD78 /* CameraViewControllerConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewControllerConstraint.swift; sourceTree = "<group>"; };
+		BD50FD741DA92FCE0035FD78 /* ConfirmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmViewController.swift; sourceTree = "<group>"; };
+		BD50FD751DA92FCE0035FD78 /* ConfirmViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfirmViewController.xib; sourceTree = "<group>"; };
+		BD50FD761DA92FCE0035FD78 /* PhotoLibraryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoLibraryViewController.swift; sourceTree = "<group>"; };
+		BD50FD781DA92FCE0035FD78 /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		BD50FD791DA92FCE0035FD78 /* CropOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CropOverlay.swift; sourceTree = "<group>"; };
+		BD50FD7A1DA92FCE0035FD78 /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		BD50FD7B1DA92FCE0035FD78 /* PermissionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionsView.swift; sourceTree = "<group>"; };
+		BD50FD911DA9328D0035FD78 /* SearchByImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchByImageViewController.swift; sourceTree = "<group>"; };
 		BD65405B1DA7480700E10162 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		BD65405E1DA74D7300E10162 /* UIViewController+alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+alert.swift"; path = "Helper/UIViewController+alert.swift"; sourceTree = "<group>"; };
 		BDB244091DA76EB0000268BB /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +192,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD50FD631DA92FCE0035FD78 /* ALCameraViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BD50FD641DA92FCE0035FD78 /* CameraView.strings */,
+				BD50FD651DA92FCE0035FD78 /* CameraViewAssets.xcassets */,
+				BD50FD661DA92FCE0035FD78 /* Utilities */,
+				BD50FD711DA92FCE0035FD78 /* ViewController */,
+				BD50FD771DA92FCE0035FD78 /* Views */,
+			);
+			path = ALCameraViewController;
+			sourceTree = "<group>";
+		};
+		BD50FD661DA92FCE0035FD78 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				BD50FD671DA92FCE0035FD78 /* CameraGlobals.swift */,
+				BD50FD681DA92FCE0035FD78 /* CameraShot.swift */,
+				BD50FD691DA92FCE0035FD78 /* ImageFetcher.swift */,
+				BD50FD6A1DA92FCE0035FD78 /* PhotoLibraryAuthorizer.swift */,
+				BD50FD6B1DA92FCE0035FD78 /* SingleImageFetcher.swift */,
+				BD50FD6C1DA92FCE0035FD78 /* SingleImageSaver.swift */,
+				BD50FD6D1DA92FCE0035FD78 /* UIButtonExtensions.swift */,
+				BD50FD6E1DA92FCE0035FD78 /* UIViewExtensions.swift */,
+				BD50FD6F1DA92FCE0035FD78 /* Utilities.swift */,
+				BD50FD701DA92FCE0035FD78 /* VolumeControl.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		BD50FD711DA92FCE0035FD78 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BD50FD721DA92FCE0035FD78 /* CameraViewController.swift */,
+				BD50FD731DA92FCE0035FD78 /* CameraViewControllerConstraint.swift */,
+				BD50FD741DA92FCE0035FD78 /* ConfirmViewController.swift */,
+				BD50FD751DA92FCE0035FD78 /* ConfirmViewController.xib */,
+				BD50FD761DA92FCE0035FD78 /* PhotoLibraryViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		BD50FD771DA92FCE0035FD78 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BD50FD781DA92FCE0035FD78 /* CameraView.swift */,
+				BD50FD791DA92FCE0035FD78 /* CropOverlay.swift */,
+				BD50FD7A1DA92FCE0035FD78 /* ImageCell.swift */,
+				BD50FD7B1DA92FCE0035FD78 /* PermissionsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		BD65405D1DA74D5700E10162 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +255,7 @@
 		BDB2440E1DA77F5D000268BB /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				BD50FD631DA92FCE0035FD78 /* ALCameraViewController */,
 				BD50FD5F1DA7C22D0035FD78 /* SwiftHUEColorPicker.swift */,
 				BDB244F51DA7AB5B000268BB /* ImageLoader */,
 				BDB2444C1DA7A254000268BB /* KRProgressHUD */,
@@ -240,6 +337,7 @@
 				BDCA2E141DA38B7B004C2EF7 /* ViewController.swift */,
 				BD65405B1DA7480700E10162 /* HomeTableViewController.swift */,
 				BDB244091DA76EB0000268BB /* SearchViewController.swift */,
+				BD50FD911DA9328D0035FD78 /* SearchByImageViewController.swift */,
 				BD50FD5A1DA7ADA00035FD78 /* SearchResultsCollectionViewController.swift */,
 				BD50FD5D1DA7B0050035FD78 /* ImgCollectionViewCell.swift */,
 				BDCA2E161DA38B7B004C2EF7 /* Main.storyboard */,
@@ -381,9 +479,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD50FD7D1DA92FCE0035FD78 /* CameraViewAssets.xcassets in Resources */,
 				BDCA2E1D1DA38B7B004C2EF7 /* LaunchScreen.storyboard in Resources */,
 				BDCA2E1A1DA38B7B004C2EF7 /* Assets.xcassets in Resources */,
+				BD50FD7C1DA92FCE0035FD78 /* CameraView.strings in Resources */,
 				BDCA2E181DA38B7B004C2EF7 /* Main.storyboard in Resources */,
+				BD50FD8B1DA92FCE0035FD78 /* ConfirmViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,23 +502,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD50FD8A1DA92FCE0035FD78 /* ConfirmViewController.swift in Sources */,
+				BD50FD821DA92FCE0035FD78 /* SingleImageFetcher.swift in Sources */,
 				BDB244FC1DA7AB5B000268BB /* Disk.swift in Sources */,
+				BD50FD901DA92FCE0035FD78 /* PermissionsView.swift in Sources */,
 				BDB244551DA7A254000268BB /* KRActivityIndicatorViewStyle.swift in Sources */,
 				BDB244541DA7A254000268BB /* KRActivityIndicatorView.swift in Sources */,
+				BD50FD811DA92FCE0035FD78 /* PhotoLibraryAuthorizer.swift in Sources */,
+				BD50FD8E1DA92FCE0035FD78 /* CropOverlay.swift in Sources */,
+				BD50FD871DA92FCE0035FD78 /* VolumeControl.swift in Sources */,
 				BDB244581DA7A254000268BB /* KRProgressHUDIconType.swift in Sources */,
+				BD50FD8D1DA92FCE0035FD78 /* CameraView.swift in Sources */,
 				BDB245011DA7AB5B000268BB /* UIImageView+ImageLoader.swift in Sources */,
 				BDB244FF1DA7AB5B000268BB /* Manager.swift in Sources */,
 				BDB244571DA7A254000268BB /* KRProgressHUDExtensions.swift in Sources */,
 				BD50FD5E1DA7B0050035FD78 /* ImgCollectionViewCell.swift in Sources */,
+				BD50FD8F1DA92FCE0035FD78 /* ImageCell.swift in Sources */,
 				BD50FD601DA7C22D0035FD78 /* SwiftHUEColorPicker.swift in Sources */,
+				BD50FD891DA92FCE0035FD78 /* CameraViewControllerConstraint.swift in Sources */,
+				BD50FD831DA92FCE0035FD78 /* SingleImageSaver.swift in Sources */,
 				BDB2440A1DA76EB0000268BB /* SearchViewController.swift in Sources */,
+				BD50FD861DA92FCE0035FD78 /* Utilities.swift in Sources */,
+				BD50FD881DA92FCE0035FD78 /* CameraViewController.swift in Sources */,
+				BD50FD7F1DA92FCE0035FD78 /* CameraShot.swift in Sources */,
 				BDB244561DA7A254000268BB /* KRProgressHUD.swift in Sources */,
+				BD50FD841DA92FCE0035FD78 /* UIButtonExtensions.swift in Sources */,
+				BD50FD801DA92FCE0035FD78 /* ImageFetcher.swift in Sources */,
 				BD65405F1DA74D7300E10162 /* UIViewController+alert.swift in Sources */,
 				BD65405C1DA7480700E10162 /* HomeTableViewController.swift in Sources */,
+				BD50FD8C1DA92FCE0035FD78 /* PhotoLibraryViewController.swift in Sources */,
+				BD50FD921DA9328D0035FD78 /* SearchByImageViewController.swift in Sources */,
 				BD50FD5B1DA7ADA00035FD78 /* SearchResultsCollectionViewController.swift in Sources */,
 				BDB245001DA7AB5B000268BB /* UIImage+ImageLoader.swift in Sources */,
 				BDCA2E151DA38B7B004C2EF7 /* ViewController.swift in Sources */,
+				BD50FD851DA92FCE0035FD78 /* UIViewExtensions.swift in Sources */,
 				BDCA2E131DA38B7B004C2EF7 /* AppDelegate.swift in Sources */,
+				BD50FD7E1DA92FCE0035FD78 /* CameraGlobals.swift in Sources */,
 				BDB244591DA7A254000268BB /* KRProgressHUDViewController.swift in Sources */,
 				BDB244FE1DA7AB5B000268BB /* Loader.swift in Sources */,
 				BDB244FD1DA7AB5B000268BB /* ImageLoader.swift in Sources */,

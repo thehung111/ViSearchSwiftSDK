@@ -63,6 +63,15 @@ class HomeTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if demoItems[indexPath.row] == HomeTableViewController.IMAGE_SEARCH {
+            self.performSegue(withIdentifier: "showImageSearch", sender: self)
+        }
+        else {
+            self.performSegue(withIdentifier: "startDemoSegue", sender: tableView.cellForRow(at: indexPath) )
+        }
+    }
+    
 
     
     
@@ -91,11 +100,13 @@ class HomeTableViewController: UITableViewController {
                 }
                 
                 searchController.navigationItem.title = demoItem
-                self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
-
-                
+              
             }
         }
+
+        // hide the back label in the next controller
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
+
         
     }
     
