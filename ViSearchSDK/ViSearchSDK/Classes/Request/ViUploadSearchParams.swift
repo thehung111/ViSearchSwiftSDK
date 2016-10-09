@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+/// construct upload search parameter requests. See http://developers.visenze.com/api/?shell#search-by-image for more details
 public class ViUploadSearchParams: ViBaseSearchParams {
     
     // MARK: properties
@@ -48,7 +49,7 @@ public class ViUploadSearchParams: ViBaseSearchParams {
         image = nil
     }
     
-    // return the image data
+    /// return the compressed/resize image data before uploading
     public func generateCompressImageForUpload() -> Data?
     {
         if let image = image {

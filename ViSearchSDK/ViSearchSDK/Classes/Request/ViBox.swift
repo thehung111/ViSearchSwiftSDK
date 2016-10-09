@@ -1,5 +1,8 @@
 import Foundation
 
+
+/// Configure selection box for uploaded image if necessary
+/// See http://developers.visenze.com/api/?shell#selection-box
 public struct ViBox {
     public var x1 : Int;
     public var x2 : Int;

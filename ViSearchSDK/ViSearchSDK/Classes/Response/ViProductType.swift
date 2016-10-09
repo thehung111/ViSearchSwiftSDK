@@ -1,6 +1,6 @@
 import Foundation
 
-// product type result for automatic object recognition feature
+/// product type result for automatic object recognition feature
 open class ViProductType: NSObject {
     public var box   : ViBox
     public var score : Float

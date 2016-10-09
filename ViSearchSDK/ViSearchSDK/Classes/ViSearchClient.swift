@@ -15,12 +15,11 @@ public enum ViAPIEndPoints: String {
     case TRACK         = "__aq.gif"
 }
 
-
+/// Search client
 open class ViSearchClient: NSObject, URLSessionDelegate {
     
     public static let VISENZE_URL = "https://visearch.visenze.com"
     public static let VISENZE_TRACK_URL = "https://track.visenze.com"
-    
     
     public typealias SuccessHandler = (ViResponseData?) -> ()
     public typealias FailureHandler = (Error) -> ()

@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+/// Construct color search parameter request
 public class ViColorSearchParams: ViBaseSearchParams {
     public var color: String
     

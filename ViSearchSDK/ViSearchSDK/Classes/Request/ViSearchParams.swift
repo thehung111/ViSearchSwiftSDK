@@ -1,5 +1,6 @@
 import Foundation
 
+/// Construct search parameters request for Find Similar, You May Also Like APIs
 public class ViSearchParams: ViBaseSearchParams {
     public var imName: String
     

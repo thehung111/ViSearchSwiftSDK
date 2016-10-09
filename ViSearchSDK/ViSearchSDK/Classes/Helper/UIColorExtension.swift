@@ -1,8 +1,12 @@
 import UIKit
 
+
+// MARK: - extension for UIColor to generate hex string
 extension UIColor {
     
-    // return hex string for UIColor in form of XXXXXX
+    /// return hex string for UIColor in form of XXXXXX (6 characters without the #)
+    ///
+    /// - returns: 6 characters hex string
     public func hexString() -> String {
         var r: CGFloat = 0
         var g: CGFloat = 0

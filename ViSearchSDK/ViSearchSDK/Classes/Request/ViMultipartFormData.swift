@@ -8,7 +8,7 @@
 
 import Foundation
 
-// used for image upload
+/// used to encode image data in form upload
 open class ViMultipartFormData: NSObject {
     
     // MARK: - Helper Types and methods
@@ -37,11 +37,16 @@ open class ViMultipartFormData: NSObject {
         }
     }
     
+    
+    /// Generate random boundary
+    ///
+    /// - returns: random boundary for use in form upload
     public static func randomBoundary() -> String {
         return String(format: "visearch.boundary.%08x%08x", arc4random(), arc4random())
     }
     
-    // assumption, image Data is of the type jpeg after we compress the image
+    /// assumption: imageData is of the type jpeg after we compress the image
+    /// encode image data for uploading, add content headers
     public static func encode(imageData: Data? , boundary: String) -> Data {
         var encoded = Data()
         

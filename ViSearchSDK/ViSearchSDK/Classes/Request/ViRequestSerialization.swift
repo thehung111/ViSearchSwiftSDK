@@ -8,9 +8,10 @@
 
 import Foundation
 
+/// Serialize request parameters and data
 open class ViRequestSerialization {
     
-    // generate base 64 basic authentication header value
+    /// generate base 64 basic authentication header value
     public func getBasicAuthenticationString(accessKey : String, secret: String) -> String {
         let userPasswordString = "\(accessKey):\(secret)"
         let userPasswordData = userPasswordString.data(using: String.Encoding.utf8)
@@ -20,13 +21,13 @@ open class ViRequestSerialization {
         return authString
     }
     
-    // generate the url with query string
+    /// generate the url with query string and escape parameter properly
     public func generateRequestUrl( baseUrl: String , apiEndPoint: ViAPIEndPoints , searchParams : ViSearchParamsProtocol) -> String {
         let queryString = generateQueryString(searchParams.toDict())
         return "\(baseUrl)/\(apiEndPoint.rawValue)?\(queryString)"
     }
     
-    // generate the query string to append to the url
+    /// generate the query string to append to the url
     public func generateQueryString(_ parameters: [String: Any]) -> String {
         var components: [(String, String)] = []
         
