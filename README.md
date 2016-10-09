@@ -48,7 +48,7 @@ The ViSearch iOS SDK is an open source software to provide easy integration of V
 
 The source code of a demo application is provided together with the SDK ([demo](https://github.com/thehung111/ViSearchSwiftSDK/tree/master/Example)). You can simply open **Example** project in XCode and run the demo.
 
-![screenshot](./doc/xcode_1_1.png)
+<img src="./doc/xcode_1_1.png" alt="screenshot" height="200">
 
 You should change the access key and secret key in AppDelegate file to your own key pair before running.
 
@@ -60,18 +60,17 @@ ViSearch.sharedInstance.setup(accessKey: "YOUR_ACCESS_KEY", secret: "YOUR_SECRET
 
 You can play around with our demo app to see how we build up the cool image search feature using ViSearch SDK.
 
-![ios_demo1](./doc/ios_demo1.png)
-
+<img src="./doc/ios_demo_1.png" alt="ios_demo1" width="1024">
 
 ### 2.2 Set up Xcode project
 
 In Xcode, go to File > New > Project Select the Single View Application.
 
-![screenshot](./doc/ios0.png)
+<img src="./doc/ios0.png" alt="screenshot" style="max-width:100%;height: 300px;">
 
 Type a name for your project and press Next, here we use Demo as the project name.
 
-![screenshot](./doc/ios1_1.png)
+<img src="./doc/ios1_1.png" alt="screenshot" style="max-width:100%;height: 300px;">
 
 ### 2.3 Import ViSearch Swift SDK
 
@@ -93,8 +92,11 @@ pod init
 Edit the Podfile as follow:
 ```
 platform :ios, '9.0'
-...
-pod 'ViSearchSwiftDev', '~>0.0.1'
+use_frameworks!
+
+target '<Your Target Name>' do
+    pod 'ViSearchSwiftDev', '~>0.1'
+end
 ...
 ```
 
@@ -109,11 +111,23 @@ The Demo.xcworkspace project should be created.
 
 You can also download the iOS [ViSearch SDK](https://github.com/thehung111/ViSearchSwiftSDK/archive/master.zip) directly. To use it, unzip it and drag ViSearchSDK project into Demo project.
 
-![screenshot](./doc/ios2_1.png)
+<img src="./doc/ios2_1.png" alt="screenshot" height="200">
 
-Then add it to your project
+- Open the `ViSearchSDK` folder, and drag the `ViSearchSDK.xcodeproj` into the Project Navigator of your application's Xcode project.
 
-![screenshot](./doc/ios3.png)
+    > It should appear nested underneath your application's blue project icon. Whether it is above or below all the other Xcode groups does not matter.
+
+    <img src="./doc/ios3.png" alt="screenshot" height="200">
+
+- Select the `ViSearchSDK.xcodeproj` in the Project Navigator and verify the deployment target matches that of your application target.
+- Next, select your application project in the Project Navigator (blue project icon) to navigate to the target configuration window and select the application target under the "Targets" heading in the sidebar.
+- In the tab bar at the top of that window, open the "General" panel.
+- Click on the `+` button under the "Embedded Binaries" section.
+- Select the `ViSearchSDK.framework`.
+
+> The `ViSearchSDK.framework` is automagically added as a target dependency, linked framework and embedded framework.
+
+You are done!
 
 ### 2.4 Add Privacy Usage Description
 

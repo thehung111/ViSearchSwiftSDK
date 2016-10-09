@@ -30,10 +30,10 @@ Pod::Spec.new do |s|
   # s.social_media_url   = "http://twitter.com/Ngo Hung"
 
   s.source = { :git => 'https://github.com/thehung111/ViSearchSwiftSDK.git', :tag => s.version }
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '8.0'
 
   # s.platform     = :ios
-  s.platform     = :ios, "9.0"
+  s.platform     = :ios, "8.0"
 
   
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -87,6 +87,5 @@ Pod::Spec.new do |s|
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
-  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '3' }
-
+ 
 end
