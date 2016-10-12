@@ -1,4 +1,4 @@
-# ViSearch Swift SDK and Demo Source Code
+# This repo is for dev only. Please use official SDK at: [https://github.com/visenze/visearch-sdk-swift](https://github.com/visenze/visearch-sdk-swift)
 
 ![Swift](http://img.shields.io/badge/swift-3.0-brightgreen.svg)
 ![https://travis-ci.org/thehung111/ViSearchSwiftSDK.svg?branch=master](https://travis-ci.org/thehung111/ViSearchSwiftSDK.svg?branch=master)
